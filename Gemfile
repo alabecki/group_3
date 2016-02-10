@@ -25,6 +25,9 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 # extra gems to make it work 
 gem 'rails_12factor', group: :production
 gem 'puma'
+# bootstrap
+gem 'bootstrap-sass', '~> 2.3.1.0'
+
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
