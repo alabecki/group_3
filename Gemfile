@@ -1,5 +1,5 @@
 source 'https://rubygems.org'
-ruby '2.2.2', :engine => 'jruby', :engine_version => '9.0.0.0'
+#ruby '2.2.2', :engine => 'jruby', :engine_version => '9.0.0.0'
 
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
@@ -41,3 +41,7 @@ gem 'bootstrap-sass', '~> 2.3.1.0'
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
+
+#Google Maps API Gems
+gem 'geocoder'
+gem 'gmaps4rails'
