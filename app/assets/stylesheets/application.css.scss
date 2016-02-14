@@ -15,20 +15,15 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
 
+/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+/*CSS stats here*/
 body{
 	background: #1a1a1a;
-}
-
-footer{
-	color: white;
+	font-family: Verdana, Geneva, sans-serif;
 }
 
 hr{
-	border-color: black;
-}
-
-.navbar{
-	background: black;
+	border-color: white;
 }
 
 .jumbotron{
@@ -36,8 +31,11 @@ hr{
 	height: 500px;
 }
 
-
-
+/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+/*Navbar*/
+.navbar{
+	background: #0d0d0d;
+}
 
 .navbar-fixed-top .nav {
     padding: 15px 0;
@@ -48,12 +46,12 @@ hr{
     padding-right: 500px;
 }
 
-
-
-
-
 /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
 /*Footer CSS*/
+footer{
+	color: white;
+}
+
 .footer-distributed{
 	background-color: #1a1a1a;
 	box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.12);
@@ -199,8 +197,6 @@ hr{
 	margin-right: 3px;
 	margin-bottom: 5px;
 }
-
-/* If you don't want the footer to be responsive, remove these media queries */
 
 @media (max-width: 880px) {
 
