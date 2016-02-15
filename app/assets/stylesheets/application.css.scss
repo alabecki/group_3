@@ -34,23 +34,30 @@ hr{
 
 .jumbotron{
 	background: #1a1a1a;
+	margin-bottom:0;	
 }
 
 /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
 /*Navbar*/
 .navbar{
-	background: #0d0d0d;
+	background: #1a1a1a;
+    border: none!important;	
+	margin-bottom:0;
 }
 
 .navbar-fixed-top .nav {
-    padding: 15px 0;
+    //padding: 15px 0;
 }
 
 .navbar-fixed-top .navbar-brand {
-    padding: 30px;
+    //padding: 30px;
     padding-right: 500px;
 }
 
+li:hover{
+    background-color: #03a9f4;
+    color: white;
+}
 /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
 /*Footer CSS*/
 footer{
