@@ -39,17 +39,25 @@ hr{
 
 /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
 /*Navbar*/
+.nav{
+	height:70px;
+}
+
 .navbar{
 	background: #1a1a1a;
     border: none!important;	
 	margin-bottom:0;
 }
 
-.navbar-fixed-top .nav {
+/*the logo thing*/
+.navbar-brand{
+	padding-top:25px;
+	padding-right: 500px;
 }
 
-.navbar-fixed-top .navbar-brand {
-    padding-right: 500px;
+li{
+	padding: 10px;
+	height: 70px;	
 }
 
 li:hover{
