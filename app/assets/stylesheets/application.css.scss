@@ -17,6 +17,12 @@
 
 /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
 /*CSS stats here*/
+
+/*getting rid of rounded corners*/
+* {
+  border-radius: 0 !important;
+}
+
 body{
 	background: #1a1a1a;
 	font-family: Verdana, Geneva, sans-serif;
@@ -28,7 +34,6 @@ hr{
 
 .jumbotron{
 	background: #1a1a1a;
-	height: 500px;
 }
 
 /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
