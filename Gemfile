@@ -41,11 +41,10 @@ gem 'bcrypt', '~> 3.1.7'
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
-<<<<<<< HEAD
 
 #Google Maps API Gems
 gem 'geocoder'
 gem 'gmaps4rails'
-=======
+
+
 gem 'pg'
->>>>>>> 49aa8653abebf9764f3cf508bd11ba086835691a

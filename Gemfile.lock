@@ -82,10 +82,7 @@ GEM
     nokogiri (1.6.7.2)
       mini_portile2 (~> 2.0.0.rc2)
     nokogiri (1.6.7.2-java)
-<<<<<<< HEAD
-=======
     pg (0.18.4)
->>>>>>> 49aa8653abebf9764f3cf508bd11ba086835691a
     puma (2.16.0)
     puma (2.16.0-java)
     rack (1.6.4)

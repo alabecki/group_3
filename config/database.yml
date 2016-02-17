@@ -6,6 +6,10 @@
 default: &default
   adapter: postgresql
   encoding: unicode
+  pool: 5
+  username: <%= ENV['USERNAME'] %>
+  password: <%= ENV['PASSWORD'] %>
+  host:     <%= ENV['IP'] %>
 
 development:
   <<: *default
@@ -17,7 +21,7 @@ development:
   # To create additional roles in postgres see `$ createuser --help`.
   # When left blank, postgres will use the default role. This is
   # the same name as the operating system user that initialized the database.
-  username: ubuntu
+  username: postgres
 
   # The password associated with the postgres role (username).
   password: 41806710
@@ -44,7 +48,7 @@ test:
   <<: *default
   encoding: unicode
   database: group_3_test
-  username: ubuntu
+  username: postgres
   password: 41806710
 
 # As with config/secrets.yml, you never want to store sensitive information,
