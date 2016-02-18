@@ -17,6 +17,5 @@ class User<ActiveRecord::Base
   after_validation :geocode
 
 
-
 end
 
