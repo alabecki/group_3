@@ -49,11 +49,7 @@ test:
   encoding: unicode
   database: group_3_test
   username: postgres
-<<<<<<< HEAD
   password: 41806710
-=======
-  password: 12345
->>>>>>> c17648afc8eae481e4bcd4d9b420e7e88371ab03
 
 # As with config/secrets.yml, you never want to store sensitive information,
 # like your database password, in your source code. If your source code is
