@@ -4,6 +4,7 @@
 <br>
 <br>
 <br>
+<div class = "field">
 <h1><%= @user.username %> </h1>
 
 <p>
@@ -12,8 +13,29 @@
   city <%= @user.city %><br>
   country <%= @user.country %><br>
   postal code <%= @user.postal_code %><br>
-  lol <%= @user.lol %><br>
-  dota2 <%= @user.dota2 %><br>
-  smote <%= @user.smite %><br>
-  hots <%= @user.hots %><br>
+  
+  <p>Games Played:</p>
+  
+  
+  <% if @user.lol == true %>
+    <p> lol</p>
+  <% end %>
+  
+  <% if @user.dota2 == true %>
+    <p> dota2</p>
+  <% end %>
+    
+    <% if @user.smite == true %>
+    <p>smite</p>
+  <% end %>
+  
+  <% if @user.hots == true %>
+    <p>hots</p><br>
+    <p> Description</p><br>
+
+  <%= @user.description %><br>
+  
+  <% end %>
 </p>
+
+</div>

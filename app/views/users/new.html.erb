@@ -25,19 +25,34 @@
         <%= f.label :city %><br>
         <%= f.text_field :city, class: 'form-control' %><br>
         
+        <%= f.label :country %><br>
+        <%= f.text_field :country, class: 'form-control' %><br>
+        
         <%= f.label :postal_code %><br>
         <%= f.text_field :postal_code, class: 'form-control' %><br>
         
-         League of Ledgends <%= f.check_box :lol %> <br>
-         dota2 <%= f.check_box :dota2 %> <br>
-         Smite <%= f.check_box :smite %> <br>
-         Heroes of the Storm <%= f.check_box :hots %><br>
-
+        <P> Games You Play:</P>
+        
+         <%= f.label :lol %>
+         <%= f.check_box :lol %> <br>
+        <%= f.label :lol %>
+         <%= f.check_box :dota2 %> <br>
+          <%= f.label :dota2 %>
+         <%= f.check_box :lol %> <br>
+          <%= f.label :smite %>
+         <%= f.check_box :smite %> <br>
+          <%= f.label :hots %>
+         <%= f.check_box :hots %> <br>
+         
+        <%= f.label :description %><br>
+        <%= f.text_area :description, class: 'form-control'%><br>
+        
          <%= f.label :password %><br>
       <%= f.password_field :password, class: 'form-control' %><br>
 
       <%= f.label :password_confirmation, "Confirmation" %><br>
       <%= f.password_field :password_confirmation, class: 'form-control' %><br>
+     
 
         <%= f.submit "Create my account", class: "btn btn-primary" %>
       <% end %>
