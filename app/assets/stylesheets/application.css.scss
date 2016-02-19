@@ -24,8 +24,9 @@
 }
 
 body{
-	background: #1a1a1a;
+	background: #0f151a;
 	font-family: Verdana, Geneva, sans-serif;
+	color: white;
 }
 
 hr{
@@ -52,22 +53,50 @@ hr{
 /*the logo thing*/
 .navbar-brand{
 	padding-top:25px;
-	padding-right: 500px;
+	padding-right: 520px;
 }
 
-li{
+.navbarvar{
 	padding: 10px;
-	height: 70px;	
+	height: 70px;
 }
 
-li:hover{
-    background-color: #03a9f4;
-    color: white;
+.navbarvar:hover{
+    background-color: black;
 }
+
+/*for the dropdown menu*/
+.dropdownvar{
+	color: white;
+}
+
+.dropdown:hover{
+	background-color: black;
+}
+
+.dropdown-menu{
+	background-color: #1a1a1a;
+	color: white;
+}
+
+.dropdown-menu>li>a{
+	width: 100%;
+	color: #9d9d9d;
+}
+
+.dropdown-menu>li>a:hover{
+	background-color: black;
+	color: white;
+}
+
 /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
 /*Footer CSS*/
 footer{
 	color: white;
+}
+
+.footerlogo{
+	padding-left: 60px;
 }
 
 .footer-distributed{
@@ -77,9 +106,7 @@ footer{
 	width: 100%;
 	text-align: left;
 	font: bold 16px sans-serif;
-
 	padding: 55px 50px;
-	margin-top: 80px;
 }
 
 .footer-distributed .footer-left,
