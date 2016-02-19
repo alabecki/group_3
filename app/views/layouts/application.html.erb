@@ -18,14 +18,15 @@
         <div id="navbar" class="navbar-collapse collapse">
         	<ul class="nav navbar-nav">
 				<li class="navbarvar"><%= link_to 'HOME', root_path %></li>
-				<li class="navbarvar"><%= link_to 'SEARCH', maps_path %></li>
 				<% if logged_in? %>				
-	         		<li class="navbarvar"><%= link_to "USERS", '#' %></li>    
+	         		<li class="navbarvar"><%= link_to "USERS", '#' %></li>
+	         	<!--Accounts dropdown tab-->    
           		<li class="navbarvar dropdown">
             		<a href="#" class="dropdown-toggle" data-toggle="dropdown">
               		ACCOUNT <b class="caret"></b></a>
             		<ul class="dropdown-menu">
               			<li class="dropdownvar"><%= link_to "PROFILE", current_user %></li>
+ 			            <li class="dropdownvar"><%= link_to "SEARCH", maps_path %></li>             			
 			            <li class="dropdownvar"><%= link_to "SETTINGS", '#' %></li>
 			            <li class="divider"></li>
 			            <li class = "dropdownvar"><%= link_to "Log out", logout_path, method: "DELETE" %></li>
