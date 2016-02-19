@@ -33,12 +33,11 @@
          Smite <%= f.check_box :smite %> <br>
          Heroes of the Storm <%= f.check_box :hots %><br>
 
-        <%= f.label :password %><br>
-        <%= f.password_field :password %><br>
+         <%= f.label :password %><br>
+      <%= f.password_field :password, class: 'form-control' %><br>
 
-        <%= f.label :password_confirmation, "Confirmation" %><br>
-        <%= f.password_field :password_confirmation %><br>
-        <br />
+      <%= f.label :password_confirmation, "Confirmation" %><br>
+      <%= f.password_field :password_confirmation, class: 'form-control' %><br>
 
         <%= f.submit "Create my account", class: "btn btn-primary" %>
       <% end %>

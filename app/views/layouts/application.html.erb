@@ -13,14 +13,34 @@
 	<nav class="navbar navbar-inverse navbar-fixed-top">
       <div class="container">
         <div class="navbar-header">
-          	<a class="navbar-brand">RANDOM ENCOUNTERS</a>
+          <a class="navbar-brand" href="#">LOGO GOES HERE</a>
         </div>
         <div id="navbar" class="navbar-collapse collapse">
         	<ul class="nav navbar-nav">
 				<li><%= link_to 'HOME', root_path %></li>
 				<li><%= link_to 'HOME', root_path %></li>
 				<li><%= link_to 'HOME', root_path %></li>
+				<li><%= link_to 'HOME', root_path %></li>
 				<li><%= link_to 'SIGN UP', signup_path %></li>
+					<% if logged_in? %>
+          <li><%= link_to "USERS", '#' %></li>
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+              Account <b class="caret"></b>
+            </a>
+            <ul class="dropdown-menu">
+              <li><%= link_to "PROFILE", current_user %></li>
+              <li><%= link_to "SETTINGS", '#' %></li>
+              <li class="divider"></li>
+              <li>
+                <%= link_to "Log out", logout_path, method: "DELETE" %>
+              </li>
+            </ul>
+          </li>
+        <% else %>
+          <li><%= link_to "LOG IN", login_path %></li>
+        <% end %>
+
 			</ul>
         </div>
       </div>
@@ -31,10 +51,7 @@
     <!--Footer-->
 	<footer class="footer-distributed">
 		<div class="footer-left">
-			<div class = "footerlogo">
-				<img src="/assets/logo.png" alt="logo" width=150px height=120px margin-bottom: 100px />
-			</div>
-			<!--<h3>RANDOM<span>ENCOUNTERS</span></h3>-->
+			<h3>Company<span>logo</span></h3>
 			<p class="footer-links">
 				<a href="#">Home</a>
 				·
