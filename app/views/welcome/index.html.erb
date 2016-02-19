@@ -1,7 +1,7 @@
 <style>
 .jumbotron{
 	background: #0f151a;
-	height: 450px;
+	height: 550px;
 }
 
 .jumbotron1{
@@ -10,7 +10,7 @@
     background-attachment: fixed;
     background-position: center;
     background-size: 100%;
-	height: 900px;
+	height: 880px;
 }
 
 .jumbotron2{
@@ -19,27 +19,34 @@
     background-attachment: fixed;
     background-position: center;
     background-size: 100%;
-    height: 700px;
+    height: 780px;
 }
 
 .topjumbotron{
 	background-color: #152230;
-	height: 15px;
-	width: 80%;
+	height: 18px;
+	width: 90%;
     margin: 0 auto;
 }
 
 .innerjumbotron1{
-	height: 100%;
-	width: 80%;
+	height: 400px;
+	width: 90%;
     margin: 0 auto;
-	opacity: 0.9;
+	opacity: 0.86;
 }
 
 .innerjumbotron2{
 	height: 100%;
 	width: 80%;
     margin: 0 auto;
+}
+
+.innerjumbotron3{
+	height: 100%;
+	width: 90%;
+    margin: 0 auto;
+	opacity: 0.86;
 }
 
 .floating{
@@ -54,6 +61,10 @@
 	color: white;
 }
 
+hr{
+	border-width: 5px;
+}
+
 </style>
 
 
@@ -66,18 +77,18 @@
 		<br />
 		<br />
 		<br />
+		<br />
 		<div class="topjumbotron">
 		</div>
 		<div class="jumbotron innerjumbotron1">
 			<div class="floating">
-				<br />
-				<br />
 	  			<img src="/assets/logo.png" alt="logo" width=300px height=250px margin-bottom: 100px />
 	  		</div>
 	  		<hr>
-	  		<p><-logo will be going there. thin bar of color above ^ will change accordingly to match logo. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin aliquet elementum enim, at elementum erat suscipit accumsan. Sed rhoncus commodo sapien, eu pellentesque nibh.
-	  		</p>
+	  		<h2>A RANDOM ENCOUNTER HAS APPEARED. WILL YOU FIGHT OR RUN?</h2>
 	  		<hr>
+	  		<p>Tired of going on quests and adventures with strangers you'll never meet halfway across the world? Random Encounters helps gamers find friends near their area to buddy up and game with.
+	  		</p>	  		
 	  	</div>
 		</div>
   	</div>
@@ -86,16 +97,18 @@
 <!--Second jumbotron-->
 <div class="jumbotron whitetext">
 	<div class="container">
-		<div class="jumbotron innerjumbotron1">
+		<br />
+		<br />
+		<div class="jumbotron innerjumbotron2">
 			<div class="floating">
 	  			<img src="/assets/googlemaps-logo.png" alt="logo" width=200px height=200px />
 	  		</div>
 	  		<br />
-	  		<p>Use the google maps api to blah blah Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin aliquet elementum enim, at elementum erat suscipit accumsan. Sed rhoncus commodo sapien, eu pellentesque nibh.
+	  		<p>Use our integrated Google Maps API to search and team up with other gamers with similar interests and who play similar games in your area. Don't have an account yet? Sign up today!
 	  		</p>
 	  		<br />
   			<p>
-  				<a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a>
+  				<a class="btn btn-primary btn-lg" href="<%= maps_path %>" role="button">Learn more</a>
   			</p>
 	  	</div>
 		</div>
@@ -109,15 +122,17 @@
   		<br />
   		<br />
   		<br />
+  		<br />
+  		<br />
   		<div class="topjumbotron">
   		</div>
-		<div class="jumbotron innerjumbotron1">
-	  		<img src="/assets/logo-league.png" alt="logo" width=250px height=110px />
-	  		<img src="/assets/logo-sc2.png" alt="logo" width=250px height=150px />
-	  		<img src="/assets/logo-wow.png" alt="logo" width=250px height=150px />
-	  		<img src="/assets/logo-sc2.png" alt="logo" width=250px height=150px />
-	  		<img src="/assets/logo-sc2.png" alt="logo" width=250px height=150px />
-	  		<img src="/assets/logo-sc2.png" alt="logo" width=250px height=150px />
+		<div class="jumbotron innerjumbotron3">
+	  		<img src="/assets/logo-league.png" alt="logo" width=290px height=130px />
+	  		<img src="/assets/logo-sc2.png" alt="logo" width=290px height=170px />
+	  		<img src="/assets/logo-wow.png" alt="logo" width=290px height=170px />
+	  		<img src="/assets/logo-sc2.png" alt="logo" width=290px height=170px />
+	  		<img src="/assets/logo-sc2.png" alt="logo" width=290px height=170px />
+	  		<img src="/assets/logo-sc2.png" alt="logo" width=290px height=170px />
 		</div>
   	</div>
 </div>
