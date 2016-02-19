@@ -53,18 +53,42 @@ hr{
 /*the logo thing*/
 .navbar-brand{
 	padding-top:25px;
-	padding-right: 500px;
+	padding-right: 450px;
 }
 
-li{
+.navbarvar{
 	padding: 10px;
-	height: 70px;	
+	height: 70px;
 }
 
-li:hover{
-    background-color: #152230;
-    color: white;
+.navbarvar:hover{
+    background-color: black;
 }
+
+/*for the dropdown menu*/
+.dropdownvar{
+	color: white;
+}
+
+.dropdown:hover{
+	background-color: black;
+}
+
+.dropdown-menu{
+	background-color: #1a1a1a;
+	color: white;
+}
+
+.dropdown-menu>li>a{
+	width: 100%;
+	color: #9d9d9d;
+}
+
+.dropdown-menu>li>a:hover{
+	background-color: black;
+	color: white;
+}
+
 /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
 /*Footer CSS*/
 footer{
