@@ -1,4 +1,3 @@
-
 <%= stylesheet_link_tag "styleprofile" %>
 <!DOCTYPE html>
 <html>
@@ -49,17 +48,11 @@
 <p class="postal">
   <strong> Postal Code </strong>
   postal code <%= @user.postal_code %><br>
-<<<<<<< HEAD
-  lol <%= @user.lol %><br>
-  dota2 <%= @user.dota2 %><br>
-  smote <%= @user.smite %><br>
-  hots <%= @user.hots %><br>
-</p>
 </p>
 
 <p class="game">
-  <strong> Game </strong>
- <% if @user.lol == true %>
+  <p> Games Played:</p>
+  <% if @user.lol == true %>
     <p> lol</p>
   <% end %>
   
@@ -73,10 +66,15 @@
   
   <% if @user.hots == true %>
     <p>hots</p><br>
-    <p> Description</p><br>
+    <p> About me....</p><br>
+  </p>
 
-  <%= @user.description %><br>
-</p>
+  <p><%= @user.description %><br></p>
+  
+
+  <% end %>
+
+
 <div class="friends">
   Friends List Placeholder <br>
   <img src="/assets/ballon.jpg"  width=50px, height=50px />

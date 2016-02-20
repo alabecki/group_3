@@ -1,4 +1,3 @@
-
 class User<ActiveRecord::Base
   before_save { self.email = email.downcase }
   validates :username,  presence: true, length: { maximum: 50 }
@@ -27,7 +26,6 @@ class User<ActiveRecord::Base
   
   geocoded_by :address
   after_validation :geocode
-end
 
 
-
+end 

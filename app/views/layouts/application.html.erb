@@ -26,9 +26,8 @@
               		ACCOUNT <b class="caret"></b></a>
             		<ul class="dropdown-menu">
               			<li class="dropdownvar"><%= link_to "PROFILE", current_user %></li>
-			            <li><%= link_to "Settings", edit_user_path(current_user) %></li>
+			            <li><%= link_to "SETTINGS", edit_user_path(current_user) %></li>
  			            <li class="dropdownvar"><%= link_to "SEARCH", maps_path %></li>             			
-			            <li class="dropdownvar"><%= link_to "SETTINGS", '#' %></li>
 			            <li class="divider"></li>
 			            <li class = "dropdownvar"><%= link_to "Log out", logout_path, method: "DELETE" %></li>
             		</ul>
