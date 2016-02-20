@@ -49,14 +49,33 @@
 <p class="postal">
   <strong> Postal Code </strong>
   postal code <%= @user.postal_code %><br>
-</p>
-
-<p class="game">
-  <strong> Game </strong>
+<<<<<<< HEAD
   lol <%= @user.lol %><br>
   dota2 <%= @user.dota2 %><br>
   smote <%= @user.smite %><br>
   hots <%= @user.hots %><br>
+</p>
+</p>
+
+<p class="game">
+  <strong> Game </strong>
+ <% if @user.lol == true %>
+    <p> lol</p>
+  <% end %>
+  
+  <% if @user.dota2 == true %>
+    <p> dota2</p>
+  <% end %>
+    
+    <% if @user.smite == true %>
+    <p>smite</p>
+  <% end %>
+  
+  <% if @user.hots == true %>
+    <p>hots</p><br>
+    <p> Description</p><br>
+
+  <%= @user.description %><br>
 </p>
 <div class="friends">
   Friends List Placeholder <br>
