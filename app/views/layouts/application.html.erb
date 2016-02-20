@@ -29,11 +29,12 @@
 			            <li><%= link_to "SETTINGS", edit_user_path(current_user) %></li>
  			            <li class="dropdownvar"><%= link_to "SEARCH", maps_path %></li>             			
 			            <li class="divider"></li>
-			            <li class = "dropdownvar"><%= link_to "Log out", logout_path, method: "DELETE" %></li>
+			            <li class = "dropdownvar"><%= link_to "LOG OUT", logout_path, method: "DELETE" %></li>
             		</ul>
           		</li>
         		<% else %>
           			<li class="navbarvar"><%= link_to "LOG IN", login_path %></li>
+           			<li class="navbarvar"><%= link_to "SIGN UP", signup_path %></li>         			
         		<% end %>
 
 			</ul>
