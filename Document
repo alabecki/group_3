@@ -1,4 +1,4 @@
-CMPT 276: Group 3 – Derek Bunsko, Ben Conrad, Lily Doo, Raissa D'Souza, and Adam Labecki 
+MPT 276: Group 3 – Derek Bunsko, Ben Conrad, Lily Doo, Raissa D'Souza, and Adam Labecki 
 
 Document Draft:
 
@@ -10,29 +10,31 @@ Abstract:
 Random Encounters is a web application that allows gamers to meet and connect with other gamers in their area. Instead of going on quests and adventures with strangers you’ll never meet halfway across the world, Random Encounters helps gamers find friends near their area to buddy up and slay dragons with. Users can create and customize their own profile pages, use the Google Maps API to search for other gamers around them, and leave comments on each other’s profile pages to communicate. Random Encounters also showcases various features, such as the ability to upload and watch livestreams of games encoded from Twitch, and a New Users page that lists out recently joined users to allow users to welcome the new recruits aboard.
 
 Customer: 
-moba players are the key demographic 
-but online gamers in general.
-Online gamers looking to meet other gamers in person to form local gaming communities.  
+The webapp is targeted toward players of multiplayer online battle arena (moba) looking to meet other gamers within their community.  
 
 Competitive Analysis: 
 
-Steam Community
-	We are meeting people,  mostlystrangers, within our locale rather than playing games with people we already know.  This is what makes us different from Steam. 
+As the app is catered to a niche audience and for a very specific purpose. As such, it does not appear to have anything in the way of direct competition. The nearest competitor would consist of the Steam Community, or rather, that part of it which caters of moba players. Even here, our focus is distinct, as the Steam community caters to strangers form all over the world who wish to game together while Random Encounters allows users to meet people within their own geographical area.
 	
 
 User Stories: 
-	1. New User
+
+1. New User.
+
+Goal: As someone who wants to make use of this site my goal is to successfully sign up so as to gain access to all current site pages. 
+Glancing at the blue and purple home page I see the sign up/login button at the top left-hand corner. This takes me to what essentially looks like a login page but there is a highlighted link for new users to sign up. I press the link and it takes me to the sign up page. I fill out the form, which includes a username, email, address, password, and boxes to check the moba games that I play. There is also a text box to write a short self-description. I decide to wait for a later time to fill that one out. Having filled out the form I press the submit button, which takes me to my profile page displaying my user information. The sign up/login button has now become a drop down menu with links to my profile, settings (which allows me to update my profile), search (which allows me to search for other users [not fully implemented]), and a logout button. My goal is now fait accompli.
+
 	2. Admin. (Ability to delete users) 
 	3. Search Story 
 
-User Inteface Requirements: 
+User Interface Requirements: 
 	
 
 
 
 Meeting One 
 
-Itteration One Implementation:
-	Users can join, login, edit, dispaly profiles, view profiles, and search for other users via google 	map API.
+Iteration One Implementation:
+	Users can join, login, edit, display profiles, view profiles, and search for other users via google 	map API.
 
 	
