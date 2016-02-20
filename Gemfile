@@ -44,4 +44,13 @@ gem 'bcrypt', '~> 3.1.7'
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 
+#Google Maps API Gems
+gem 'geocoder'
+gem 'gmaps4rails'
+
+
+gem 'pg'
+
+
 gem 'rake', '10.5.0'
+

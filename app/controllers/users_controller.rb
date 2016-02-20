@@ -11,6 +11,15 @@ class UsersController < ApplicationController
   def new
     @user = User.new
   end
+  
+  def map 
+    @users = User.all
+    @hash = Gmaps4rails.build_markers(@users) do |user, marker|
+      marker.lat user.latitude
+      marker.lng user.longitude
+      marker.infowindow user.username
+    end
+  end
 
   def create
     @user = User.new(user_params)

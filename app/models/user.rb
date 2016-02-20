@@ -20,3 +20,14 @@ class User<ActiveRecord::Base
     BCrypt::Password.create(string, cost: cost)
   end
 end
+
+    
+  def address
+    [street_address, city, country].join(' ')
+  end
+  
+  geocoded_by :address
+  after_validation :geocode
+
+
+
