@@ -49,8 +49,6 @@ gem 'geocoder'
 gem 'gmaps4rails'
 
 
-gem 'pg'
-
 
 gem 'rake', '10.5.0'
 
