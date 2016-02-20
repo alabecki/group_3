@@ -19,7 +19,6 @@ class User<ActiveRecord::Base
                                                   BCrypt::Engine.cost
     BCrypt::Password.create(string, cost: cost)
   end
-end
 
     
   def address
@@ -28,6 +27,7 @@ end
   
   geocoded_by :address
   after_validation :geocode
+end
 
 
 
