@@ -39,7 +39,7 @@ User Stories:
 1. New User - Iteration 1
 
 Goal: As someone who wants to make use of this site my goal is to successfully sign up so as to gain access to all current site pages. 
-Glancing at the blue and purple home page I see the sign up/login button at the top left-hand corner. This takes me to what essentially looks like a login page but there is a highlighted link for new users to sign up. I press the link and it takes me to the sign up page. I fill out the form, which includes a username, email, address, password, and boxes to check the moba games that I play. There is also a text box to write a short self-description. I decide to wait for a later time to fill that one out. Having filled out the form I press the submit button, which takes me to my profile page displaying my user information. The sign up/login button has now become a drop down menu with links to my profile, settings (which allows me to update my profile), search (which allows me to search for other users [not fully implemented]), and a logout button. My goal is now fait accompli.
+Glancing at the blue and purple home page I see the Sign Up button at the top left-hand corner. This takes me to the sign up page. I fill out the form, which includes a username, email, address, password, and boxes that allow me to indicate which moba games I play. There is also a text box to write a short self-description. I decide to wait for a later time to fill that one out. The first time around I make a mistake in my email and forget to fill out the "country" form. Accordingly, I am informed that my email is not formatted correctly and that a country must be provided. Upon making the appropriate fixes, I press the submit button, which takes me to my profile page displaying my user information. The sign up and login buttons have been replaced with a drop down menu with links to my profile, settings (which allows me to update my profile), search (which allows me to search for other users [not fully implemented]), and a logout button. My goal is now fait accompli.
 
 2. Admin - Iteration tbd
 
@@ -58,9 +58,5 @@ User Interface Requirements:
 
 
 
-Meeting One 
-
-Iteration One Implementation:
-	Users can join, login, edit, display profiles, view profiles, and search for other users via google 	map API.
 
 	
