@@ -53,7 +53,12 @@ After finishing with the session, I click on the “Log Out” button on the top
 
 I am a visitor to the site and would like to search for people in my area that play the same games that I do, so I can be friends with them. However, I need to have an account on Random Encounters first to be able to interact with people, so I sign up and get to the Google Maps page by clicking the “Account” button on the navbar and then clicking “search” in the dropdown menu. On the Google Maps page, there are checkboxes with the name of a game next to them on top of the API. If I don’t check off any of the boxes, I have a blank map that shows my neighbourhood. If I check off one of the boxes, markers show up on the map indicating other users that play the game. If I refresh the page, the checkboxes should be cleared (or maybe saved checkboxes? To be decided). If I check off two or more different games, all users that play at least one of the games or 2 or more of the games show up on the map. If I scroll back on the map, more users show up on the map as their neighbourhood is revealed. Conversely, if I scroll forward on the map, less users show up on the map as their neighbourhood is concealed. If I click on a marker, a snippet of the user’s profile pops up. If I click the user, I get redirected to their user page and I can start interacting with them. 
 
-User Interface Requirements: 
+4. User - Log In - Iteration 1
+
+User Interface Requirements: As a user of the site I wish to log-in so I can have access to all the great features.
+I navigate to the right hand corner of the header banner and click the login in button. I am brought to a new page that asks for the email 
+address and password I used to sign up. I type these into the appropriate text boxes and click the blue "log in" button. I am taken to my 
+profile page and can now use the site and all its great features.
 	
 
 
