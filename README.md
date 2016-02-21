@@ -1,6 +1,6 @@
 # group_3
-CMPT 276 Group Three Project. Working Tittle: Random Encounters  
-link to site: https://quiet-stream-41275.herokuapp.com/
+CMPT 276 Group Three Project. Title: Random Encounters  
+link to site: https://secure-gorge-21030.herokuapp.com/
 
 changes for "basic user model":
   created user controller (still at default values)
@@ -19,7 +19,3 @@ changes for "finish user signup"
     Some validations implemented but more to be added
   created a very basic "show" (profile page), which is currently displayed upon signing upon
      so far I have not figured out how to indicate which "boxes" where clicked.
-
-New app link
-
-https://secure-gorge-21030.herokuapp.com/
