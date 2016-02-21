@@ -19,13 +19,16 @@ As the app is catered to a niche audience and for a very specific purpose. As su
 
 User Stories: 
 
-1. New User.
+1. New User - Iteration 1
 
 Goal: As someone who wants to make use of this site my goal is to successfully sign up so as to gain access to all current site pages. 
 Glancing at the blue and purple home page I see the sign up/login button at the top left-hand corner. This takes me to what essentially looks like a login page but there is a highlighted link for new users to sign up. I press the link and it takes me to the sign up page. I fill out the form, which includes a username, email, address, password, and boxes to check the moba games that I play. There is also a text box to write a short self-description. I decide to wait for a later time to fill that one out. Having filled out the form I press the submit button, which takes me to my profile page displaying my user information. The sign up/login button has now become a drop down menu with links to my profile, settings (which allows me to update my profile), search (which allows me to search for other users [not fully implemented]), and a logout button. My goal is now fait accompli.
 
 	2. Admin. (Ability to delete users) 
-	3. Search Story 
+
+3. Search Story - Iteration 2
+
+I am a visitor to the site and would like to search for people in my area that play the same games that I do, so I can be friends with them. However, I need to have an account on Random Encounters first to be able to interact with people, so I sign up and get to the Google Maps page by clicking the “Account” button on the navbar and then clicking “search” in the dropdown menu. On the Google Maps page, there are checkboxes with the name of a game next to them on top of the API. If I don’t check off any of the boxes, I have a blank map that shows my neighbourhood. If I check off one of the boxes, markers show up on the map indicating other users that play the game. If I refresh the page, the checkboxes should be cleared (or maybe saved checkboxes? To be decided). If I check off two or more different games, all users that play at least one of the games or 2 or more of the games show up on the map. If I scroll back on the map, more users show up on the map as their neighbourhood is revealed. Conversely, if I scroll forward on the map, less users show up on the map as their neighbourhood is concealed. If I click on a marker, a snippet of the user’s profile pops up. If I click the user, I get redirected to their user page and I can start interacting with them. 
 
 User Interface Requirements: 
 	
