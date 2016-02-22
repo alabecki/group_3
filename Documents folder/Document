@@ -57,10 +57,13 @@ I am a visitor to the site and would like to search for people in my area that p
 
 User Interface Requirements: As a user of the site I wish to log-in so I can have access to all the great features.
 I navigate to the right hand corner of the header banner and click the login in button. I am brought to a new page that asks for the email 
-address and password I used to sign up. I type these into the appropriate text boxes and click the blue "log in" button. I am taken to my 
-profile page and can now use the site and all its great features.
+address and password I used to sign up. I type these into the appropriate text boxes and click the blue "log in" button. I am taken to my profile page and can now use the site and all its great features.
 	
+5. User - Update Profil - Iteration 1
 
+Goal - make chages to my user profile
+
+Having just logged in, as per story 4, I decide that I want to make a couple of changes to my profile. Accordingly, I click on the "settings" button in the drop down menu on the top left hand corner of the screen. This takes me to the Settings page, which allows me to make changes to my account information. I place a check by Smite, as I have recently started playing that game and would like meet people who play it. I also decide to write a little bit about myself in the description text-box. Having made the desired changes, I hit the submit button, which takes me back to my profile pages where the changes are displayed along with the rest of my information. 
 
 
 
