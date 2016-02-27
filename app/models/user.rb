@@ -19,13 +19,19 @@ class User<ActiveRecord::Base
     BCrypt::Password.create(string, cost: cost)
   end
 
-    
+  # Concatenate address into single string  
   def address
     [street_address, city, country].join(' ')
   end
   
+  # Calculates long/lat from user address
   geocoded_by :address
   after_validation :geocode
+  
+  def self.search(search)
+    where("username ILIKE ?", "%#{search}%")
+  end
+  
 
 
 end 

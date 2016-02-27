@@ -1,10 +1,10 @@
 source 'https://rubygems.org'
-ruby '2.2.2', :engine => 'jruby', :engine_version => '9.0.0.0'
+#ruby '2.2.2', :engine => 'jruby', :engine_version => '9.0.0.0'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.5.1'
 # Use jdbcpostgresql as the database for Active Record
-gem 'activerecord-jdbcpostgresql-adapter'
+#gem 'activerecord-jdbcpostgresql-adapter'
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 5.0'
 # Use Uglifier as compressor for JavaScript assets
@@ -45,3 +45,5 @@ gem 'geocoder'
 gem 'gmaps4rails'
 
 gem 'rake', '10.5.0'
+
+gem 'pg'

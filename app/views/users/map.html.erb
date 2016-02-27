@@ -69,15 +69,33 @@ hr{
 
 <div class="container containerjumbotron">
 	<p>To be implemented in a future iteration. Please refresh the page if the api isn't loading.</p>
-	<div style='width: 800px; color: black'>
-	  	<div id="map" style='width: 800px; height: 400px;'></div>
+	<!-- Search Bar -->
+	<% if @users.present? %>
+	  <!-- Do nothing -->
+	<% else %>
+	  <p>Sorry there are no users that follow that criteria </p>
+	  <% render @users %>
+	<% end %>
+	<div style="color:black">
+		<%= form_tag(maps_path, :method => "get", id: "search-form") do %>
+			<%= text_field_tag :search, params[:search], placeholder: "Search Users" %>
+			<%= submit_tag "Search" %>
+		<% end %>
+	</div>
+	<br />
+	
+	  	<div id="map" style='width: 800px; height: 400px; color: black'></div>
 	</div>
 	
 	<script type="text/javascript">
 	    handler = Gmaps.build('Google');
 	    handler.buildMap({ 
 	        provider: {
-	            disableDefaultUI: true
+	            disableDefaultUI: true,
+	            maxZoom: 16,
+	            center: new google.maps.LatLng(<%= current_user.latitude %>, <%= current_user.longitude %>),
+	            zoom: 15
+	            
 	            
 	        }, 
 	        internal: {
