@@ -1,7 +1,10 @@
 # group_3
-CMPT 276 Group Three Project. Working Tittle: Random Encounters  
-link to site: https://quiet-stream-41275.herokuapp.com/
+/* ************************************************************* */
+CMPT 276 Group Three Project. Title: Random Encounters  
+link to site: https://secure-gorge-21030.herokuapp.com/
+(remote site goes down randomly...please refer to the email I sent you)
 
+/* ************************************************************* */
 changes for "basic user model":
   created user controller (still at default values)
   created user model found in db/migrate, which has one main file and three "add" files which add latitude, longitude, and password.
@@ -19,7 +22,3 @@ changes for "finish user signup"
     Some validations implemented but more to be added
   created a very basic "show" (profile page), which is currently displayed upon signing upon
      so far I have not figured out how to indicate which "boxes" where clicked.
-
-New app link
-
-https://secure-gorge-21030.herokuapp.com/
