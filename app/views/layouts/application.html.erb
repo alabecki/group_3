@@ -22,8 +22,9 @@
         	<ul class="nav navbar-nav">
 
 				<li class="navbarvar"><%= link_to 'HOME', root_path %></li>
-				<% if logged_in? %>				
-	         		<li class="navbarvar"><%= link_to "USERS", '#' %></li>
+				<% if logged_in? %>		
+				
+	         		<li class="navbarvar"><%= link_to "USERS", users_path %></li>
 	         	<!--Accounts dropdown tab-->    
           		<li class="navbarvar dropdown">
             		<a href="#" class="dropdown-toggle" data-toggle="dropdown">
