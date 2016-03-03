@@ -17,6 +17,10 @@ class UsersController < ApplicationController
     if params[:search]
       @users = User.search(params[:search])
     end
+    if params[:lol]
+      @users = User.lolsearch(params[:lol])
+    end
+    
     @hash = Gmaps4rails.build_markers(@users) do |user, marker|
       marker.lat user.latitude
       marker.lng user.longitude

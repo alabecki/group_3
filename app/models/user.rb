@@ -28,10 +28,15 @@ class User<ActiveRecord::Base
   geocoded_by :address
   after_validation :geocode
   
+  # Map Searching
   def self.search(search)
-    where("username ILIKE ?", "%#{search}%")
+    where("lol ILIKE ?", "%#{search}%")
   end
   
-
+  def self.lolsearch(lol)
+    if(lol)
+      where(lol: true)
+    end
+  end
 
 end 

@@ -69,9 +69,9 @@ hr{
 
 <div class="container containerjumbotron">
 	<p>To be implemented in a future iteration. Please refresh the page if the api isn't loading.</p>
-	<!-- Search Bar -->
+<!-- Search Bar -->
 	<% if @users.present? %>
-	  <!-- Do nothing -->
+	  <!-- Print nothing -->
 	<% else %>
 	  <p>Sorry there are no users that follow that criteria </p>
 	  <% render @users %>
@@ -81,6 +81,22 @@ hr{
 			<%= text_field_tag :search, params[:search], placeholder: "Search Users" %>
 			<%= submit_tag "Search" %>
 		<% end %>
+	</div>
+	<br />
+	<div style="color:white; display: inline-block">
+		<%= form_tag(maps_path, :method => "get", id: "search-form") do %>
+			<%= check_box_tag(:lol) %>
+			<%= label_tag(:lol, "League of Legends  ") %>
+			<%= check_box_tag(:dota2) %>
+			<%= label_tag(:lol, "Dota 2  ") %>
+			<%= check_box_tag(:smite) %>
+			<%= label_tag(:lol, "Smite  ") %>
+			<%= check_box_tag(:hots) %>
+			<%= label_tag(:lol, "Heroes of the Storm  ") %>
+			<p style="color:black; float:right; margin-left:5px" >
+				<%= submit_tag "Search" %>
+			</p>
+		<% end %>	
 	</div>
 	<br />
 	
@@ -93,9 +109,12 @@ hr{
 	        provider: {
 	            disableDefaultUI: true,
 	            maxZoom: 16,
-	            center: new google.maps.LatLng(<%= current_user.latitude %>, <%= current_user.longitude %>),
+	            <% if logged_in? %>
+	            	center: new google.maps.LatLng(<%= current_user.latitude %>, <%= current_user.longitude %>),
+	            <% else %>
+	            	center: new google.maps.LatLng(0, 0),
+	            <% end %>
 	            zoom: 15
-	            
 	            
 	        }, 
 	        internal: {
