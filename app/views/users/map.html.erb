@@ -69,13 +69,16 @@ hr{
 
 <div class="container containerjumbotron">
 	<p>To be implemented in a future iteration. Please refresh the page if the api isn't loading.</p>
+	
 <!-- Search Bar -->
 	<% if @users.present? %>
 	  <!-- Print nothing -->
 	<% else %>
-	  <p>Sorry there are no users that follow that criteria </p>
+	  <p style="color:red">Sorry there are no users that follow that criteria </p>
 	  <% render @users %>
 	<% end %>
+	
+	<!-- Username Search -->
 	<div style="color:black">
 		<%= form_tag(maps_path, :method => "get", id: "search-form") do %>
 			<%= text_field_tag :search, params[:search], placeholder: "Search Users" %>
@@ -83,16 +86,27 @@ hr{
 		<% end %>
 	</div>
 	<br />
+	
+	<!-- Game Search -->
 	<div style="color:white; display: inline-block">
 		<%= form_tag(maps_path, :method => "get", id: "search-form") do %>
-			<%= check_box_tag(:lol) %>
+		
+			<%= hidden_field_tag :lol, 'false' %>
+			<%= check_box_tag :lol, 'true' %>
 			<%= label_tag(:lol, "League of Legends  ") %>
-			<%= check_box_tag(:dota2) %>
-			<%= label_tag(:lol, "Dota 2  ") %>
-			<%= check_box_tag(:smite) %>
-			<%= label_tag(:lol, "Smite  ") %>
-			<%= check_box_tag(:hots) %>
-			<%= label_tag(:lol, "Heroes of the Storm  ") %>
+			
+			<%= hidden_field_tag :dota2, 'false' %>
+			<%= check_box_tag :dota2, 'true' %>
+			<%= label_tag(:dota2, "Dota 2  ") %>
+			
+			<%= hidden_field_tag :smite, 'false' %>
+			<%= check_box_tag :smite, 'true' %>
+			<%= label_tag(:smite, "Smite  ") %>
+			
+			<%= hidden_field_tag :hots, 'false' %>
+			<%= check_box_tag :hots, 'true' %>
+			<%= label_tag(:hots, "Heroes of the Storm  ") %>
+			
 			<p style="color:black; float:right; margin-left:5px" >
 				<%= submit_tag "Search" %>
 			</p>

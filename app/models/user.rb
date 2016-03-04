@@ -28,15 +28,17 @@ class User<ActiveRecord::Base
   geocoded_by :address
   after_validation :geocode
   
-  # Map Searching
+# Map Searching
+  # Username Search
   def self.search(search)
-    where("lol ILIKE ?", "%#{search}%")
+    where("username ILIKE ?", "%#{search}%")
   end
   
-  def self.lolsearch(lol)
-    if(lol)
-      where(lol: true)
-    end
+  # Game Search  
+  def self.gameSearch(lol, dota2, smite, hots)
+    # Double verification trick
+    where("(lol = ? AND lol = 'true') OR (dota2 = ? AND dota2 = 'true') OR (smite = ? AND smite = 'true') OR (hots = ? AND hots = 'true')", "#{lol}", "#{dota2}", "#{smite}", "#{hots}")
   end
+  
 
 end 

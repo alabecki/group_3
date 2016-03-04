@@ -12,21 +12,29 @@ class UsersController < ApplicationController
     @user = User.new
   end
   
+
   def map 
     @users = User.all
+    
+    # Username Search
     if params[:search]
       @users = User.search(params[:search])
     end
-    if params[:lol]
-      @users = User.lolsearch(params[:lol])
+    
+    # Game Search
+    if params[:lol] == "true" || params[:dota2] == "true" || params[:smite] == "true" || params[:hots] == "true"
+      @users = User.gameSearch(params[:lol], params[:dota2], params[:smite], params[:hots] )
     end
     
+    # Generate Map with Appropriate Users
     @hash = Gmaps4rails.build_markers(@users) do |user, marker|
       marker.lat user.latitude
       marker.lng user.longitude
       marker.infowindow user.username
     end
   end
+  
+  
 
   def create
     @user = User.new(user_params)
@@ -62,10 +70,10 @@ class UsersController < ApplicationController
                                    :password_confirmation, :lol, :dota2, :smite, :hots, :description)
     end    
     
-def correct_user
-      @user = User.find(params[:id])
-      redirect_to(root_url) unless current_user?(@user)
-end
-  
+    def correct_user
+          @user = User.find(params[:id])
+          redirect_to(root_url) unless current_user?(@user)
+    end
+    
 end
 
