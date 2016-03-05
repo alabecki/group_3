@@ -39,6 +39,7 @@ hr{
 <script src='//google-maps-utility-library-v3.googlecode.com/svn/tags/infobox/1.1.9/src/infobox_packed.js' type='text/javascript'></script>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <!--Beginning of body-->
+<body data-no-turbolink > 
 <div class="jumbotron jumbotron1">
 	<br />
 	<br />
@@ -114,6 +115,10 @@ hr{
 	</div>
 	<br />
 	
+	<%= link_to 'Reset', maps_path, 'data-no-turbolink' => true %>
+	<br />
+	<br />
+	
 	  	<div id="map" style='width: 800px; height: 400px; color: black'></div>
 	</div>
 	
@@ -152,3 +157,4 @@ hr{
 <br />
 <br />
 <br />
+</body>
