@@ -27,7 +27,7 @@ gem 'rails_12factor', group: :production
 gem 'puma'
 # bootstrap
 gem 'bootstrap-sass', '~> 3.3.6'
-
+gem 'pg'
 
 # Use ActiveModel has_secure_password
 gem 'bcrypt', '~> 3.1.7'
@@ -45,6 +45,10 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 # Google Maps API
 gem 'geocoder'
 gem 'gmaps4rails'
+
+gem 'will_paginate',           '3.0.7'
+gem 'bootstrap-will_paginate', '0.0.10'
+
 
 gem 'rake', '10.5.0'
 

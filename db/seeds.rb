@@ -9,6 +9,16 @@
 User.create!(username: 'Pam', email: 'p@example.org', street_address: '234 hasting st', password: '123456', city: 'burnaby', country: 'canada', lol: true)
 User.create!(username: 'Jen', email: 'jen@example.org', street_address: '8888 university dr', password: '123456', city: 'burnaby', country: 'canada')
 User.create!(username: 'Alex', email: 'a@example.org', street_address: '200 6th ave', password: '123456', city: 'new westminster', country: 'canada')
+User.create!(username:  'Admin',
+             email: 'admin@gmail.com',
+             street_address: '555 Top ave.',
+             city: 'halifax',
+             country: 'canada',
+             password:              'foobar',
+             password_confirmation: 'foobar',
+             admin: true)
+
+
 User.create!(username: 'Todd', email: 'tggdda@example.org', street_address: '234 university dr', password: '123456', city: 'burnaby', country: 'canada', lol: true, smite: true)
 User.create!(username: 'Logan', email: 'ghaaaa@example.org', street_address: '100 main st', password: '123456', city: 'vancouver', country: 'canada', dota2: true, hots: true, smite: true)
 User.create!(username: 'qwerty', email: 'qwerrttu@example.org', street_address: '400 clark dr', password: '123456', city: 'vancouver', country: 'canada', dota2: true, smite: true)
