@@ -101,3 +101,24 @@ hr{
 <br />
 <br />
 <br />
+
+<div class="container">
+	<p>hi guys</p>
+	<%= link_to 'Home', main_app.root_path %>
+	<%= link_to 'Forums', forem.forums_path %>
+</div>
+<br /> 
+<br />
+<br />
+<br />
+<br /> 
+<br />
+<br />
+<br />
+<!--
+http://www.sitepoint.com/forem-rails-forum-engine/
+https://github.com/rubysherpas/forem
+https://github.com/rubysherpas/forem/issues/495
+
+"undefined local variable or method 'name' raises because Devise creates User model with no name column. I got the same problem and just added this column to User model. I think that forem documentation should be slightly changed to mention this fact. Of course, users should be given an option to enter their name during registration and after they sign in."
+-->

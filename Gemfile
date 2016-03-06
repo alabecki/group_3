@@ -48,7 +48,10 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 gem 'geocoder'
 gem 'gmaps4rails'
 
+gem 'rake', '10.5.0'
+
+#gems for forum
+gem 'forem', github: "radar/forem", branch: "rails4"
+gem 'forem-bootstrap', github: "radar/forem-bootstrap"
 gem 'will_paginate',           '3.0.7'
 gem 'bootstrap-will_paginate', '0.0.10'
-
-gem 'rake', '10.5.0'

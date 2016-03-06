@@ -1,13 +1,12 @@
 Rails.application.routes.draw do
   resources :users
   get 'users/new'
-  get 'maps' => 'users#map'
-
-  
   get    'login'   => 'sessions#new'
   post   'login'   => 'sessions#create'
   delete 'logout'  => 'sessions#destroy'
   get 'signup'  => 'users#new'
+  get 'maps' => 'users#map'
+  get '/users/sign_in', :to => "users#sign_in"
   
   resources :account_activations, only: [:edit]
 
