@@ -52,6 +52,6 @@ gem 'bootstrap-will_paginate', '0.0.10'
 
 gem 'rake', '10.5.0'
 
-gem 'pg'
+
 
 

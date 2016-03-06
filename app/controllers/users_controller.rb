@@ -6,6 +6,17 @@ class UsersController < ApplicationController
 
   def index
      @users = User.paginate(page: params[:page])
+   
+    # Username Search
+    if params[:search]
+      @users = User.search(params[:search]).paginate(page: params[:page])
+    end
+    
+    # Game Search
+    if params[:lol] == "true" || params[:dota2] == "true" || params[:smite] == "true" || params[:hots] == "true"
+      @users = User.gameSearch(params[:lol], params[:dota2], params[:smite], params[:hots] ).paginate(page: params[:page])
+    end
+    
   end
 
 

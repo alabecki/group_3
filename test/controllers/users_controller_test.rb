@@ -6,8 +6,4 @@ class UsersControllerTest < ActionController::TestCase
     assert_response :success
   end
   
-  test "gameSearch coverage" do
-    
-  end
-
 end
