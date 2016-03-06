@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160229002852) do
+ActiveRecord::Schema.define(version: 20160305215416) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -27,14 +27,17 @@ ActiveRecord::Schema.define(version: 20160229002852) do
     t.boolean  "dota2"
     t.boolean  "smite"
     t.boolean  "hots"
-    t.datetime "created_at",      null: false
-    t.datetime "updated_at",      null: false
+    t.datetime "created_at",                        null: false
+    t.datetime "updated_at",                        null: false
     t.float    "longitude"
     t.float    "latitude"
     t.string   "password_digest"
     t.text     "description"
-    t.boolean  "admin"
+    t.boolean  "admin",             default: false
     t.string   "remember_digest"
+    t.string   "activation_digest"
+    t.boolean  "activated",         default: false
+    t.datetime "activated_at"
   end
 
 end
