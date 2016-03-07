@@ -84,41 +84,36 @@ hr{
 		<%= form_tag(maps_path, :method => "get", id: "search-form") do %>
 			<%= text_field_tag :search, params[:search], placeholder: "Search Users" %>
 			<%= submit_tag "Search" %>
+			<br />
+			<!-- Game Search -->
+			<div style="color:white; display: inline-block; padding-top:20px">
+				<%= form_tag(maps_path, :method => "get", id: "search-form") do %>
+				
+					<%= hidden_field_tag :lol, 'false' %>
+					<%= check_box_tag :lol, 'true' %>
+					<%= label_tag(:lol, "League of Legends") %>
+					
+					<%= hidden_field_tag :dota2, 'false' %>
+					<%= check_box_tag :dota2, 'true' %>
+					<%= label_tag(:dota2, "Dota 2") %>
+					
+					<%= hidden_field_tag :smite, 'false' %>
+					<%= check_box_tag :smite, 'true' %>
+					<%= label_tag(:smite, "Smite") %>
+					
+					<%= hidden_field_tag :hots, 'false' %>
+					<%= check_box_tag :hots, 'true' %>
+					<%= label_tag(:hots, "Heroes of the Storm") %>
+					
+					<div style="color:black; float:right; margin-left:5px"><%= submit_tag "Search" %></div>
+					
+				<% end %>	
+			</div>
 		<% end %>
 	</div>
-	<br />
-	
-	<!-- Game Search -->
-	<div style="color:white; display: inline-block">
-		<%= form_tag(maps_path, :method => "get", id: "search-form") do %>
-		
-			<%= hidden_field_tag :lol, 'false' %>
-			<%= check_box_tag :lol, 'true' %>
-			<%= label_tag(:lol, "League of Legends  ") %>
-			
-			<%= hidden_field_tag :dota2, 'false' %>
-			<%= check_box_tag :dota2, 'true' %>
-			<%= label_tag(:dota2, "Dota 2  ") %>
-			
-			<%= hidden_field_tag :smite, 'false' %>
-			<%= check_box_tag :smite, 'true' %>
-			<%= label_tag(:smite, "Smite  ") %>
-			
-			<%= hidden_field_tag :hots, 'false' %>
-			<%= check_box_tag :hots, 'true' %>
-			<%= label_tag(:hots, "Heroes of the Storm  ") %>
-			
-			<p style="color:black; float:right; margin-left:5px" >
-				<%= submit_tag "Search" %>
-			</p>
-		<% end %>	
-	</div>
-	<br />
-	
 	<%= link_to 'Reset', maps_path %>
 	<br />
 	<br />
-	
 	  	<div id="map" style='width: 800px; height: 400px; color: black'></div>
 	</div>
 	
