@@ -23,7 +23,7 @@ class User<ActiveRecord::Base
     BCrypt::Password.create(string, cost: cost)
   end
 
-    
+  # Concatenate address into single string  
   def address
     [street_address, city, country].join(' ')
   end
@@ -48,8 +48,21 @@ class User<ActiveRecord::Base
     update_attribute(:remember_digest, nil)
   end
   
+  # Calculate Lat/Lng from address
   geocoded_by :address
   after_validation :geocode
+  
+# Map Searching
+  # Username Search
+  def self.search(search)
+    where("username ILIKE ?", "%#{search}%")
+  end
+  
+  # Game Search  
+  def self.gameSearch(lol, dota2, smite, hots)
+    # Double verification trick
+    where("(lol = ? AND lol = 'true') OR (dota2 = ? AND dota2 = 'true') OR (smite = ? AND smite = 'true') OR (hots = ? AND hots = 'true')", "#{lol}", "#{dota2}", "#{smite}", "#{hots}")
+  end
   
   # Activates an account.
   def activate

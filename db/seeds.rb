@@ -23,3 +23,6 @@ User.create!(username:  'Admin',
              activated_at: Time.zone.now)
 
 
+User.create!(username: 'Todd', email: 'tggdda@example.org', street_address: '234 university dr', password: '123456', city: 'burnaby', country: 'canada', lol: true, smite: true)
+User.create!(username: 'Logan', email: 'ghaaaa@example.org', street_address: '100 main st', password: '123456', city: 'vancouver', country: 'canada', dota2: true, hots: true, smite: true)
+User.create!(username: 'qwerty', email: 'qwerrttu@example.org', street_address: '400 clark dr', password: '123456', city: 'vancouver', country: 'canada', dota2: true, smite: true)
