@@ -127,7 +127,7 @@ hr{
 	            <% if logged_in? %>
 	            	center: new google.maps.LatLng(<%= current_user.latitude %>, <%= current_user.longitude %>),
 	            <% else %>
-	            	center: new google.maps.LatLng(0, 0),
+	            	center: new google.maps.LatLng(49.278752, -122.917086),
 	            <% end %>
 	            zoom: 15
 	            
