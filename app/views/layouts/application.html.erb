@@ -51,21 +51,27 @@
 	<footer class="footer-basic-centered">
 		<p class="footer-company-motto">Random Encounters</p>
 		<p class="footer-links">
-			<%= link_to 'Home', root_path %>
-			·
-			<a href="#">Link</a>
-			·
-			<a href="#">Link</a>
-			·
-			<a href="#">Link</a>
-			·
-			<a href="#">Link</a>
-			·
-			<a href="#">Link</a>
+      <% if logged_in? %>
+  			<%= link_to 'Home', root_path %>
+  			·
+  			<%= link_to 'My Profile', current_user %>
+  			·
+  			<%= link_to 'Search', maps_path %>
+  			·
+  			<%= link_to 'Users', users_path %>
+  			·
+  			<%= link_to "Log out", logout_path, method: "DELETE" %>
+      <% else %>
+        <%= link_to 'Home', root_path %>
+        ·
+        <%= link_to 'Login', login_path %>
+        ·
+        <%= link_to 'Sign Up', signup_path %>             
+      <% end %>
 		</p>
 		<p class="footer-company-name">Random Encounters &copy; 2015</p>
 	</footer>
-  
+
 </body>
 </html>
 
