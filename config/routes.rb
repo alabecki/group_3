@@ -1,4 +1,8 @@
 Rails.application.routes.draw do
+  get 'password_resets/new'
+
+  get 'password_resets/edit'
+
   resources :users
   get 'users/new'
   get 'maps' => 'users#map'
@@ -9,6 +13,7 @@ Rails.application.routes.draw do
   get 'signup'  => 'users#new'
   
   resources :account_activations, only: [:edit]
+  resources :password_resets,     only: [:new, :create, :edit, :update]
 
   
   # The priority is based upon order of creation: first created -> highest priority.
