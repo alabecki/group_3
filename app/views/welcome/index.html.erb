@@ -1,3 +1,4 @@
+<!--Homepage-->
 <style>
 .jumbotron{
 	background: #0f151a;
@@ -19,7 +20,16 @@
     background-attachment: fixed;
     background-position: center;
     background-size: 100%;
-    height: 780px;
+    height: 870px;
+}
+
+.jumbotron3{
+	background: url("/assets/winterbg.jpg");
+	background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    background-size: 100%;
+    height: 880px;
 }
 
 .topjumbotron{
@@ -29,24 +39,31 @@
     margin: 0 auto;
 }
 
+.topjumbotronfirst{
+	background-color: #152230;
+	height: 15px;
+	width: 550px;
+    margin: 0 auto;
+}
+
 .innerjumbotron1{
 	height: 400px;
 	width: 90%;
     margin: 0 auto;
-	opacity: 0.86;
 }
 
 .innerjumbotron2{
-	height: 100%;
-	width: 80%;
+	height: 400px;
+	width: 90%;
     margin: 0 auto;
+    opacity: 0.86;    
 }
 
 .innerjumbotron3{
-	height: 100%;
+	height: 600px;
 	width: 90%;
     margin: 0 auto;
-	opacity: 0.86;
+    opacity: 0.86;    
 }
 
 .floating{
@@ -60,21 +77,41 @@
 hr{
 	border-width: 5px;
 }
+
+h1{
+	text-align:center;
+	background-color: #0f151a;
+}
 </style>
 
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <!--Beginning of body-->
-<!--First jumbotron-->
+<!--First jumbotron...citybg-->
 <div class="jumbotron jumbotron1">
+		<br />
+		<br />
+		<br />
+		<br />
+		<br />
+		<br />
+		<br />
+		<br />
+		<br />
+		<br />
+		<br />			
+	<div class="container" style="width: 850px;">			
+	  	<h1 style="color:white;">CREATE. SEARCH. PLAY.</h1>
+	</div>			
+	<div class="container" style="width: 600px;">			
+	  	<h1 style="color:white;">GAME WITH US.</h1>
+	</div>	  			
+</div>
+
+<!--Second jumbotron...solid-->
+<div class="jumbotron">
 	<div class="container">
 		<br />
 		<br />
-		<br />
-		<br />
-		<br />
-		<br />
-		<div class="topjumbotron">
-		</div>
 		<div class="jumbotron innerjumbotron1">
 			<div class="floating">
 	  			<img src="/assets/logo.png" alt="logo" width=300px height=250px margin-bottom: 100px />
@@ -83,34 +120,13 @@ hr{
 	  		<h2>A RANDOM ENCOUNTER HAS APPEARED. WILL YOU FIGHT OR RUN?</h2>
 	  		<hr>
 	  		<p>Tired of going on quests and adventures with strangers you'll never meet halfway across the world? Random Encounters helps gamers find friends near their area to buddy up and game with.
-	  		</p>	  		
-	  	</div>
-		</div>
-  	</div>
-</div>
-
-<!--Second jumbotron-->
-<div class="jumbotron">
-	<div class="container">
-		<br />
-		<br />
-		<div class="jumbotron innerjumbotron2">
-			<div class="floating">
-	  			<img src="/assets/googlemaps-logo.png" alt="logo" width=200px height=200px />
-	  		</div>
-	  		<br />
-	  		<p>Use our integrated Google Maps API to search and team up with other gamers with similar interests and who play similar games in your area. Don't have an account yet? Sign up today!
 	  		</p>
-	  		<br />
-  			<p>
-  				<a class="btn btn-primary btn-lg" href="<%= maps_path %>" role="button">Learn more</a>
-  			</p>
 	  	</div>
 		</div>
 	</div>
 </div>
 
-<!--Third jumbotron-->
+<!--Third jumbotron...oribg-->
 <div class="jumbotron jumbotron2">
   	<div class="container">
   		<br />
@@ -119,9 +135,35 @@ hr{
   		<br />
   		<br />
   		<br />
+  		<br />
+  		<br />
+  		<br />
   		<div class="topjumbotron">
   		</div>
-		<div class="jumbotron innerjumbotron3">
+		<div class="jumbotron innerjumbotron2">
+			<br />
+			<div style="margin:auto; width:85%";>
+				<div class="floating">
+		  			<img src="/assets/googlemaps-logo.png" alt="logo" width=200px height=200px />
+		  		</div>
+		  		<br />
+		  		<p>Use our integrated Google Maps API to search and team up with other gamers with similar interests and who play similar games in your area. Don't have an account yet? Sign up today!
+		  		</p>
+		  		<br />
+	  			<p>
+	  				<a class="btn btn-primary btn-lg" href="<%= maps_path %>" role="button">Learn more</a>
+	  			</p>
+	  		</div>
+	  	</div>
+		</div>
+  	</div>
+</div>
+
+<!--Fourth jumbotron...solid-->
+<div class="jumbotron">
+	<div class="container">
+		<br />
+		<div class="jumbotron innerjumbotron1">
 	  		<img src="/assets/logo-league.png" alt="logo" width=290px height=130px />
 	  		<img src="/assets/logo-sc2.png" alt="logo" width=290px height=170px />
 	  		<img src="/assets/logo-smite.png" alt="logo" width=290px height=90px />
@@ -129,5 +171,41 @@ hr{
 	  		<img src="/assets/logo-dota.png" alt="logo" width=290px height=170px />
 	  		<img src="/assets/logo-wow.png" alt="logo" width=290px height=170px />
 		</div>
+		</div>
+	</div>
+</div>
+
+<!--Twitter Feed-->
+<div class="jumbotron jumbotron3">
+  	<div class="container">
+  		<br />
+  		<br />
+  		<br />
+  		<br />
+  		<br />
+  		<br />  
+  		<br />		
+			<div>
+			<!--style="margin-left:25%;"-->
+			<div style="margin-left:10%; width:85%";>
+				<div class="floating" style="margin-right: 160px;">
+				<div>
+				      <a class="twitter-timeline"
+				      href="https://twitter.com/R_encounters"
+				      data-widget-id="706651821549355009">Tweets by @R_encounters
+				      </a>
+				      <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';
+				        if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}
+				        (document,"script","twitter-wjs");
+				      </script>
+				</div>
+		  		</div>
+		  		<br />
+		  		<br /> 
+		  		<br />
+		  		<br />
+		  			<img src="/assets/twitter-logo.png" alt="logo" width=290px height=240px />
+	  		</div>				
+			</div>	
   	</div>
 </div>

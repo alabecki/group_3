@@ -2,8 +2,7 @@ Rails.application.routes.draw do
   resources :users
   get 'users/new'
   get 'maps' => 'users#map'
-
-  
+ 
   get    'login'   => 'sessions#new'
   post   'login'   => 'sessions#create'
   delete 'logout'  => 'sessions#destroy'

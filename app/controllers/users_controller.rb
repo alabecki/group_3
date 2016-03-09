@@ -6,6 +6,17 @@ class UsersController < ApplicationController
 
   def index
      @users = User.paginate(page: params[:page])
+   
+    # Username Search
+    if params[:search]
+      @users = User.search(params[:search]).paginate(page: params[:page])
+    end
+    
+    # Game Search
+    if params[:lol] == "true" || params[:dota2] == "true" || params[:smite] == "true" || params[:hots] == "true"
+      @users = User.gameSearch(params[:lol], params[:dota2], params[:smite], params[:hots] ).paginate(page: params[:page])
+    end
+    
   end
 
 
@@ -18,14 +29,29 @@ class UsersController < ApplicationController
     @user = User.new
   end
   
+
   def map 
     @users = User.all
+    
+    # Username Search
+    if params[:search]
+      @users = User.search(params[:search])
+    end
+    
+    # Game Search
+    if params[:lol] == "true" || params[:dota2] == "true" || params[:smite] == "true" || params[:hots] == "true"
+      @users = User.gameSearch(params[:lol], params[:dota2], params[:smite], params[:hots] )
+    end
+    
+    # Generate Map with Appropriate Users
     @hash = Gmaps4rails.build_markers(@users) do |user, marker|
       marker.lat user.latitude
       marker.lng user.longitude
       marker.infowindow user.username
     end
   end
+  
+  
 
   def create
     @user = User.new(user_params)
