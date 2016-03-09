@@ -11,33 +11,37 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160305215416) do
+ActiveRecord::Schema.define(version: 20160307061244) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
+
+
   create_table "users", force: :cascade do |t|
-    t.string   "username",        limit: 255
-    t.string   "email",           limit: 255
-    t.string   "street_address",  limit: 255
-    t.string   "city",            limit: 255
-    t.string   "country",         limit: 255
-    t.string   "postal_code",     limit: 255
+    t.string   "username"
+    t.string   "email"
+    t.string   "street_address"
+    t.string   "city"
+    t.string   "country"
+    t.string   "postal_code"
     t.boolean  "lol"
     t.boolean  "dota2"
     t.boolean  "smite"
     t.boolean  "hots"
-    t.datetime "created_at",                                  null: false
-    t.datetime "updated_at",                                  null: false
+    t.datetime "created_at",                                      null: false
+    t.datetime "updated_at",                                      null: false
     t.float    "longitude"
     t.float    "latitude"
-    t.string   "password_digest", limit: 255
+    t.string   "password_digest"
     t.text     "description"
-    t.boolean  "admin",             default: false
-    t.string   "remember_digest",   limit: 255
+    t.boolean  "admin",                default: false
+    t.string   "remember_digest"
     t.string   "activation_digest"
-    t.boolean  "activated",         default: false
+    t.boolean  "activated",            default: false
     t.datetime "activated_at"
+
+    t.string   "state"
   end
 
 end
