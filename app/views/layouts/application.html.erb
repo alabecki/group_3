@@ -8,65 +8,70 @@
 </head>
 
 <body>
+
 	<!--Navbar-->
 	<nav class="navbar navbar-inverse navbar-fixed-top">
       <div class="container">
-      	   <% flash.each do |message_type, message| %>
-        <div class="alert alert-<%= message_type %>"><%= message %></div>
+        <% flash.each do |message_type, message| %>
+          <div class="alert alert-<%= message_type %>"><%= message %></div>
         <% end %>
-
         <div class="navbar-header">
           <a class="navbar-brand" href="#">RANDOM ENCOUNTERS</a>
         </div>
         <div id="navbar" class="navbar-collapse collapse">
         	<ul class="nav navbar-nav">
-
-				<li class="navbarvar"><%= link_to 'HOME', root_path %></li>
-				<% if logged_in? %>		
-				
+				    <li class="navbarvar"><%= link_to 'HOME', root_path %></li>
+				    <% if logged_in? %>					
 	         		<li class="navbarvar"><%= link_to "USERS", users_path %></li>
-	         	<!--Accounts dropdown tab-->    
+	         	   <!--Accounts dropdown tab-->    
           		<li class="navbarvar dropdown">
             		<a href="#" class="dropdown-toggle" data-toggle="dropdown">
               		ACCOUNT <b class="caret"></b></a>
             		<ul class="dropdown-menu">
               			<li class="dropdownvar"><%= link_to "PROFILE", current_user %></li>
-			            <li><%= link_to "SETTINGS", edit_user_path(current_user) %></li>
- 			            <li class="dropdownvar"><%= link_to "SEARCH", maps_path %></li>             			
-			            <li class="divider"></li>
-			            <li class = "dropdownvar"><%= link_to "LOG OUT", logout_path, method: "DELETE" %></li>
+			               <li><%= link_to "SETTINGS", edit_user_path(current_user) %></li>
+ 			               <li class="dropdownvar"><%= link_to "SEARCH", maps_path %></li>             			
+			               <li class="divider"></li>
+			               <li class = "dropdownvar"><%= link_to "LOG OUT", logout_path, method: "DELETE" %></li>
             		</ul>
           		</li>
         		<% else %>
-          			<li class="navbarvar"><%= link_to "LOG IN", login_path %></li>
-           			<li class="navbarvar"><%= link_to "SIGN UP", signup_path %></li>         			
-        		<% end %>
-
-			</ul>
+          		<li class="navbarvar"><%= link_to "LOG IN", login_path %></li>
+           		<li class="navbarvar"><%= link_to "SIGN UP", signup_path %></li>
+            <% end %>
+			     </ul>
         </div>
       </div>
-    </nav>
+  </nav>
 
-    <!--Yield-->
-    <%= yield %>
-    <!--Footer-->
-		<footer class="footer-basic-centered">
-			<p class="footer-company-motto">Random Encounters</p>
-			<p class="footer-links">
-				<%= link_to 'Home', root_path %>
-				·
-				<a href="#">Link</a>
-				·
-				<a href="#">Link</a>
-				·
-				<a href="#">Link</a>
-				·
-				<a href="#">Link</a>
-				·
-				<a href="#">Link</a>
-			</p>
-			<p class="footer-company-name">Random Encounters &copy; 2015</p>
-		</footer>
+  <!--Yield-->
+  <%= yield %>
+
+  <!--Footer-->
+	<footer class="footer-basic-centered">
+		<p class="footer-company-motto">Random Encounters</p>
+		<p class="footer-links">
+      <% if logged_in? %>
+  			<%= link_to 'Home', root_path %>
+  			·
+  			<%= link_to 'My Profile', current_user %>
+  			·
+  			<%= link_to 'Search', maps_path %>
+  			·
+  			<%= link_to 'Users', users_path %>
+  			·
+  			<%= link_to "Log out", logout_path, method: "DELETE" %>
+      <% else %>
+        <%= link_to 'Home', root_path %>
+        ·
+        <%= link_to 'Login', login_path %>
+        ·
+        <%= link_to 'Sign Up', signup_path %>             
+      <% end %>
+		</p>
+		<p class="footer-company-name">Random Encounters &copy; 2015</p>
+	</footer>
+
 </body>
 </html>
 

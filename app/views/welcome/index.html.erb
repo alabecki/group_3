@@ -150,9 +150,15 @@ h1{
 		  		<p>Use our integrated Google Maps API to search and team up with other gamers with similar interests and who play similar games in your area. Don't have an account yet? Sign up today!
 		  		</p>
 		  		<br />
-	  			<p>
-	  				<a class="btn btn-primary btn-lg" href="<%= maps_path %>" role="button">Learn more</a>
-	  			</p>
+		  		<% if logged_in? %>	
+		  			<p>
+		  				<a class="btn btn-primary btn-lg" href="<%= maps_path %>" role="button">Learn more</a>
+		  			</p>
+		  		<% else %>
+		  			<p>
+		  				<a class="btn btn-primary btn-lg" href="<%= login_path %>" role="button">Learn more</a>
+		  			</p>
+		  		<% end %>		  		
 	  		</div>
 	  	</div>
 		</div>
