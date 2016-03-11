@@ -1,7 +1,6 @@
 body{
-  padding-top: 100px;
-  background-image: url("blue_smoke_by_josevera.jpg");
-  background-size:contain;
+  padding-top: 85px;
+  background: linear-gradient(to bottom right, black, #0f151a);
 
 
 
@@ -21,85 +20,44 @@ body{
 
 
 .info{
- position: relative;;
-
-  padding: 10px;
-  left: 500px;
+  padding: 5px;
+  margin-left: 500px;
   text-align: left;
   background-color: #1a1a1a;
   width: 350px;
-
-  opacity: 0.60;
-  font-family: Arial Black;
-  color: white;
-  padding: 5px;
-  border-style: outset;
-  border-color: #110f6c;
+  border: 3px solid #110f6c;
 
 }
 
 .friends{
-position: absolute;
- top: 200px;
- right: 100px;
-  margin-left: 600px;
+  position: relative;
+
+  margin-left: 400px;
   background-color: #1a1a1a;
   width: 350px;
   height: 200px;
-  opacity: 0.60;
-  font-family: Arial Black;
-  color: white;
-  padding: 5px;
-  border-style: outset;
-  border-color: #110f6c;
-
-}
-h2{
-
-  font-family: Impact;
-  color: white;
-
+  border: 3px solid blue;
 }
 h1{
   position: absolute;
-  top: 420px;
-  left: 50px;
-  width: 320px;
-  height: 60px;
-  background-color: #1a1a1a;
-  opacity: 0.60;
-  font-family: Impact;
-  color: white;
-  padding: 5px;
-  border-style: outset;
-  border-color: #110f6c;
+  left: 250px;
+  font-family: Arial;
+  color: #110f6c;
 
 }
 
-.aboutme{
-  position: absolute;
-  top: 510px;
-  left: 50px;
-  width: 320px;
 
-  background-color: #1a1a1a;
-  opacity: 0.60;
-  font-family: Arial Black;
-  color: white;
-  padding: 5px;
-  border-style: outset;
-  border-color: #110f6c;
+p{
+  color: #1b18b4;
 }
-
 
 .profile{
   background-color:#404040;
   position: absolute;
-  top: 200px;
-  left: 50px;
-
-  border-style: outset;
-  border-color: blue;
+  top: 80px;
+  left: 25px;
+  width: 200px;
+  border: 3px solid blue;
   padding: 1px;
   color: white;
 }

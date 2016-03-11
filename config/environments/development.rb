@@ -1,15 +1,6 @@
 Rails.application.configure do
   # Settings specified here will take precedence over those in config/application.rb.
 
-  config.paperclip_defaults = {
-  :storage => :s3,
-  :s3_credentials => {
-    :bucket => 'group3dev',
-    :s3_credentials => "#{Rails.root}/config/aws.yml"
-  }
-}
-
-
   # In the development environment your application's code is reloaded on
   # every request. This slows down response time but is perfect for development
   # since you don't have to restart the web server when you make code changes.
@@ -27,7 +18,7 @@ Rails.application.configure do
    config.action_mailer.delivery_method = :test
   host = 'random-encounters-alabecki.c9users.io'
   #config.action_mailer.default_url_options = { host: host }
-
+  
   config.action_mailer.default_url_options = { :host => 'localhost', :port => 3000 }
 
   # Print deprecation notices to the Rails logger.

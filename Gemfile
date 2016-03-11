@@ -1,9 +1,5 @@
 source 'https://rubygems.org'
-<<<<<<< HEAD
-ruby '2.2.3', :engine => 'jruby', :engine_version => '9.0.5.0'
-=======
-ruby '2.2.2', :engine => 'jruby', :engine_version => '9.0.0.0'
->>>>>>> fd60febc9d44862881a14f69f4a7bb6d0f749d44
+#ruby '2.2.2', :engine => 'jruby', :engine_version => '9.0.0.0'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.5.1'
@@ -27,8 +23,8 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 
 #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 #The databases (comment out one)
-#gem 'pg'	#not Windows
-gem 'activerecord-jdbcpostgresql-adapter' #Windows
+gem 'pg'	#not Windows
+#gem 'activerecord-jdbcpostgresql-adapter' #Windows
 #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -43,13 +39,6 @@ gem 'bcrypt', '~> 3.1.7'
 
 # Use Unicorn as the app server
 # gem 'unicorn'
-
-#PaperClip
-gem 'paperclip'
-gem 'aws-sdk'
-
-
-
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
@@ -66,3 +55,7 @@ gem 'bootstrap-will_paginate', '0.0.10'
 
 
 gem 'rake', '10.5.0'
+
+
+
+
