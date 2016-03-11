@@ -91,4 +91,5 @@ config.action_mailer.raise_delivery_errors = true
     :password       => ENV['6pddn0kz6546'],
     :domain         => 'heroku.com',
     :enable_starttls_auto => true
+  }
 end
