@@ -39,6 +39,11 @@
   <%= @user.city %><br>
 </p>
 
+<p class="strong">
+  <strong> State/Province </strong>
+  <%= @user.state %><br>
+</p>
+
 
 <p class="country">
   <strong> Country </stong>
@@ -66,13 +71,14 @@
   
   <% if @user.hots == true %>
     <p>hots</p><br>
+  <% end %>
+      
     <p> About me....</p><br>
   </p>
 
   <p><%= @user.description %><br></p>
   
 
-  <% end %>
 
 
 <div class="friends">

@@ -17,7 +17,9 @@ Rails.application.configure do
   config.action_mailer.raise_delivery_errors = true
    config.action_mailer.delivery_method = :test
   host = 'random-encounters-alabecki.c9users.io'
-  config.action_mailer.default_url_options = { host: host }
+  #config.action_mailer.default_url_options = { host: host }
+  
+  config.action_mailer.default_url_options = { :host => 'localhost', :port => 3000 }
 
   # Print deprecation notices to the Rails logger.
   config.active_support.deprecation = :log

@@ -45,9 +45,10 @@ class UsersController < ApplicationController
     
     # Generate Map with Appropriate Users
     @hash = Gmaps4rails.build_markers(@users) do |user, marker|
+      user_path = view_context.link_to user.username, user_path(user)
       marker.lat user.latitude
       marker.lng user.longitude
-      marker.infowindow user.username
+      marker.infowindow "#{user_path}"
     end
   end
   
@@ -89,7 +90,7 @@ class UsersController < ApplicationController
   private
 
     def user_params
-      params.require(:user).permit(:username, :email, :password, :street_address, :city, :country, :postal_code,
+      params.require(:user).permit(:username, :email, :password, :street_address, :city, :state, :country, :postal_code,
                                    :password_confirmation, :lol, :dota2, :smite, :hots, :description)
     end    
     
