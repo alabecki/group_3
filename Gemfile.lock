@@ -102,12 +102,15 @@ GEM
     nokogiri (1.6.7.2-java)
     nokogiri (1.6.7.2-x86-mingw32)
       mini_portile2 (~> 2.0.0.rc2)
+<<<<<<< HEAD
     paperclip (4.3.5)
       activemodel (>= 3.2.0)
       activesupport (>= 3.2.0)
       cocaine (~> 0.5.5)
       mime-types
       mimemagic (= 0.3.0)
+=======
+>>>>>>> fd60febc9d44862881a14f69f4a7bb6d0f749d44
     puma (2.16.0)
     puma (2.16.0-java)
     rack (1.6.4)
@@ -186,7 +189,10 @@ PLATFORMS
 
 DEPENDENCIES
   activerecord-jdbcpostgresql-adapter
+<<<<<<< HEAD
   aws-sdk
+=======
+>>>>>>> fd60febc9d44862881a14f69f4a7bb6d0f749d44
   bcrypt (~> 3.1.7)
   bootstrap-sass (~> 3.3.6)
   bootstrap-will_paginate (= 0.0.10)
@@ -195,7 +201,10 @@ DEPENDENCIES
   gmaps4rails
   jbuilder (~> 2.0)
   jquery-rails
+<<<<<<< HEAD
   paperclip
+=======
+>>>>>>> fd60febc9d44862881a14f69f4a7bb6d0f749d44
   puma
   rails (= 4.2.5.1)
   rails_12factor

@@ -1,7 +1,8 @@
 <!--Google Maps Search page-->
 <style>
 .jumbotron1{
-	background: url("/assets/xilliabg.jpg");
+	/*background: url("/assets/xilliabg.jpg");*/
+	background: url("http://i.imgur.com/9FIRg9j.jpg");
 	background-repeat: no-repeat;
     background-attachment: fixed;
     background-position: center;
@@ -127,7 +128,7 @@ hr{
 	            <% if logged_in? %>
 	            	center: new google.maps.LatLng(<%= current_user.latitude %>, <%= current_user.longitude %>),
 	            <% else %>
-	            	center: new google.maps.LatLng(0, 0),
+	            	center: new google.maps.LatLng(49.278752, -122.917086),
 	            <% end %>
 	            zoom: 15
 	            
