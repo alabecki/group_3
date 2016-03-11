@@ -130,13 +130,13 @@ ActiveRecord::Schema.define(version: 20160309080812) do
     t.float    "latitude"
     t.string   "password_digest",      limit: 255
     t.text     "description"
-    t.boolean  "admin",                            default: false
+    t.boolean  "admin",                            default: true
     t.string   "remember_digest",      limit: 255
     t.boolean  "forem_admin",                      default: false
     t.string   "forem_state",          limit: 255, default: "pending_review"
     t.boolean  "forem_auto_subscribe",             default: false
     t.string   "activation_digest",    limit: 255
-    t.boolean  "activated",                        default: false
+    t.boolean  "activated",                        default: true
     t.datetime "activated_at"
     t.string   "state",                limit: 255
     t.string   "reset_digest",         limit: 255
