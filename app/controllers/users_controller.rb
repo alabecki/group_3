@@ -45,14 +45,8 @@ class UsersController < ApplicationController
     
     # Generate Map with Appropriate Users
     @hash = Gmaps4rails.build_markers(@users) do |user, marker|
-      user_path = view_context.link_to user.username, user_path(user)
       marker.lat user.latitude
       marker.lng user.longitude
-      marker.picture({
-        "url" => "https://upload.wikimedia.org/wikipedia/commons/thumb/4/43/Red_flag.svg/2000px-Red_flag.svg.png",
-        "width" => 32,
-        "height" => 32
-      }) 
       marker.infowindow render_to_string(:partial => "/users/infobox", :locals => {:username => user.username, :lol => user.lol, :dota2 => user.dota2, :smite => user.smite, :hots => user.hots, :id => user.id})
     end
     
