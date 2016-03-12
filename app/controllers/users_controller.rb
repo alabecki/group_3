@@ -1,22 +1,22 @@
 class UsersController < ApplicationController
-  
+
  before_action :logged_in_user, only: [:index, :edit, :update, :destroy]
  before_action :correct_user,   only: [:edit, :update]
  before_action :admin_user,     only: :destroy
 
   def index
      @users = User.paginate(page: params[:page])
-   
+
     # Username Search
     if params[:search]
       @users = User.search(params[:search]).paginate(page: params[:page])
     end
-    
+
     # Game Search
     if params[:lol] == "true" || params[:dota2] == "true" || params[:smite] == "true" || params[:hots] == "true"
       @users = User.gameSearch(params[:lol], params[:dota2], params[:smite], params[:hots] ).paginate(page: params[:page])
     end
-    
+
   end
 
 
@@ -28,21 +28,21 @@ class UsersController < ApplicationController
   def new
     @user = User.new
   end
-  
 
-  def map 
+
+  def map
     @users = User.all
-    
+
     # Username Search
     if params[:search]
       @users = User.search(params[:search])
     end
-    
+
     # Game Search
     if params[:lol] == "true" || params[:dota2] == "true" || params[:smite] == "true" || params[:hots] == "true"
       @users = User.gameSearch(params[:lol], params[:dota2], params[:smite], params[:hots] )
     end
-    
+
     # Generate Map with Appropriate Users
     @hash = Gmaps4rails.build_markers(@users) do |user, marker|
       user_path = view_context.link_to user.username, user_path(user)
@@ -51,8 +51,8 @@ class UsersController < ApplicationController
       marker.infowindow "#{user_path}"
     end
   end
-  
-  
+
+
 
   def create
     @user = User.new(user_params)
@@ -79,21 +79,21 @@ class UsersController < ApplicationController
       render 'edit'
     end
   end
-  
+
   def destroy
     User.find(params[:id]).destroy
     flash[:success] = "User deleted"
     redirect_to users_url
   end
- 
- 
+
+
   private
 
     def user_params
       params.require(:user).permit(:username, :email, :password, :street_address, :city, :state, :country, :postal_code,
-                                   :password_confirmation, :lol, :dota2, :smite, :hots, :description)
-    end    
-    
+                                   :password_confirmation, :lol, :dota2, :smite, :hots, :description, :avatar)
+    end
+
 def correct_user
       @user = User.find(params[:id])
       redirect_to(root_url) unless current_user?(@user)
@@ -110,6 +110,5 @@ end
 def admin_user
       redirect_to(root_url) unless current_user.admin?
 end
-  
-end
 
+end
