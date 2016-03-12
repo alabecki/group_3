@@ -1,10 +1,26 @@
-<h1>Random Encounters</h1>
+<div class="container">
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <h1 class="col-md-offset-3">Random Encounters</h1>
+    <br />
+		<p>Hello <%= @user.username %>,</p>
 
-<p>Hello <%= @user.username %>,</p>
+		<p>
+		Welcome to Random Encounters! Click on the link below to activate your account:
+		</p>
 
-<p>
-Welcome to Random Encounters! Click on the link below to activate your account:
-</p>
-
-<%= link_to "Activate", edit_account_activation_url(@user.activation_token,
-                                                    email: @user.email) %>
+		<%= link_to "Activate", edit_account_activation_url(@user.activation_token,
+		                                                    email: @user.email) %>
+</div>    
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
