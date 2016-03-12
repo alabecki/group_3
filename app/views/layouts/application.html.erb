@@ -49,27 +49,27 @@
 
   <!--Footer-->
 	<footer class="footer-basic-centered">
-		<p class="footer-company-motto">Random Encounters</p>
+		<p class="footer-company-motto">RANDOM ENCOUNTERS</p>
 		<p class="footer-links">
       <% if logged_in? %>
-  			<%= link_to 'Home', root_path %>
+  			<%= link_to 'HOME', root_path %>
   			·
-  			<%= link_to 'My Profile', current_user %>
+  			<%= link_to 'PROFILE', current_user %>
   			·
-  			<%= link_to 'Search', maps_path %>
+  			<%= link_to 'SEARCH', maps_path %>
   			·
-  			<%= link_to 'Users', users_path %>
+  			<%= link_to 'USERS', users_path %>
   			·
-  			<%= link_to "Log out", logout_path, method: "DELETE" %>
+  			<%= link_to "LOG OUT", logout_path, method: "DELETE" %>
       <% else %>
-        <%= link_to 'Home', root_path %>
+        <%= link_to 'HOME', root_path %>
         ·
-        <%= link_to 'Login', login_path %>
+        <%= link_to 'LOG IN', login_path %>
         ·
-        <%= link_to 'Sign Up', signup_path %>             
+        <%= link_to 'SIGN UP', signup_path %>             
       <% end %>
 		</p>
-		<p class="footer-company-name">Random Encounters &copy; 2015</p>
+		<p class="footer-company-name">Random Encounters &copy; 2016</p>
 	</footer>
 
 </body>

@@ -45,11 +45,11 @@ class UsersController < ApplicationController
     
     # Generate Map with Appropriate Users
     @hash = Gmaps4rails.build_markers(@users) do |user, marker|
-      user_path = view_context.link_to user.username, user_path(user)
       marker.lat user.latitude
       marker.lng user.longitude
-      marker.infowindow "#{user_path}"
+      marker.infowindow render_to_string(:partial => "/users/infobox", :locals => {:username => user.username, :lol => user.lol, :dota2 => user.dota2, :smite => user.smite, :hots => user.hots, :id => user.id})
     end
+    
   end
   
   
