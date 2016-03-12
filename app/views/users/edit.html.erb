@@ -15,32 +15,32 @@
         <div class="col-md-6 col-md-offset-3">
           <%= form_for(@user) do |f| %>
             <%= render 'shared/error_messages' %>
-            
+
             <%= f.label :username %><br>
               <%= f.text_field :username, class: 'form-control' %><br>
-              
+
 
 
               <%= f.label :email %><br>
               <%= f.email_field :email, class: 'form-control' %><br>
 
-              
+
               <%= f.label :street_address %><br>
               <%= f.text_field :street_address, class: 'form-control' %><br>
-              
+
               <%= f.label :city %><br>
               <%= f.text_field :city, class: 'form-control' %><br>
-              
+
               <%= f.label :state %><br>
               <%= f.text_field :state, class: 'form-control' %><br>
-              
+
                <%= f.label :country %><br>
               <%= f.text_field :country, class: 'form-control' %><br>
-              
+
               <%= f.label :postal_code %><br>
               <%= f.text_field :postal_code, class: 'form-control' %><br>
-              <p> Games You Play:</p>        
-            
+              <p> Games You Play:</p>
+
             <%= f.label :lol %>
             <%= f.check_box :lol %> <br>
             <%= f.label :dota2 %>
@@ -49,11 +49,14 @@
             <%= f.check_box :smite %> <br>
             <%= f.label :hots %>
             <%= f.check_box :hots %> <br>
-               
+
+            <%= f.label :twitter_name %><br>
+            <%= f.text_field :twitter_name, class: 'form-control' %><br>
+
              <%= f.label :description %><br>
              <%= f.text_area :description, class: 'form-control'%><br>
-               
-            
+
+
             <%= f.submit "Save changes", class: "btn btn-primary" %>
           <% end %>
 
@@ -61,7 +64,7 @@
         </div>
       </div>
     </div>
-</div>    
+</div>
     <br />
     <br />
     <br />
