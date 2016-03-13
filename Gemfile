@@ -59,4 +59,4 @@ gem 'rake', '10.5.0'
 
 #PaperClip
 gem 'paperclip'
-gem 'aws-sdk'
+gem 'aws-sdk', '< 2.0'
