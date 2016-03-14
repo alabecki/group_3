@@ -1,5 +1,5 @@
 source 'https://rubygems.org'
-#ruby '2.2.2', :engine => 'jruby', :engine_version => '9.0.0.0'
+ruby '2.2.3', :engine => 'jruby', :engine_version => '9.0.5.0'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.5.1'
@@ -23,8 +23,8 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 
 #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 #The databases (comment out one)
-gem 'pg'	#not Windows
-#gem 'activerecord-jdbcpostgresql-adapter' #Windows
+#gem 'pg'	#not Windows
+gem 'activerecord-jdbcpostgresql-adapter' #Windows
 #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -44,7 +44,7 @@ gem 'bcrypt', '~> 3.1.7'
 # gem 'capistrano-rails', group: :development
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
-#gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
+gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 # Google Maps API
 gem 'geocoder'
@@ -57,5 +57,6 @@ gem 'bootstrap-will_paginate', '0.0.10'
 gem 'rake', '10.5.0'
 
 
-
-
+#PaperClip
+gem 'paperclip'
+gem 'aws-sdk', '< 2.0'
