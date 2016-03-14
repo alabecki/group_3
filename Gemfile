@@ -1,5 +1,9 @@
 source 'https://rubygems.org'
+<<<<<<< HEAD
 #ruby '2.2.3', :engine => 'jruby', :engine_version => '9.0.5.0'
+=======
+ruby '2.1.5'#, :engine => 'jruby', :engine_version => '9.0.5.0'
+>>>>>>> bb853aa4f823456cecdb2bbd079351b0840196d5
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.5.1'

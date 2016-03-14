@@ -9,7 +9,7 @@
 User.create!(username: 'Tim', email: 't@example.org', street_address: '1234 hasting st', password: '123456',
 city: 'burnaby', country: 'canada',  activated: true, activated_at: Time.zone.now, twitter_name: 'JustinTrudeau' )
 User.create!(username: 'Jen', email: 'jen@example.org', street_address: '8888 university dr', password: '123456',
-city: 'burnaby', country: 'canada',  activated: true, activated_at: Time.zone.now)
+city: 'burnaby', country: 'canada',  activated: true, activated_at: Time.zone.now, twitter_name: 'POTUS')
 User.create!(username: 'Alex', email: 'a@example.org', street_address: '200 6th ave', password: '123456', city: 'new westminster', country: 'canada')
 User.create!(username:  'Admin',
              email: 'admin@gmail.com',

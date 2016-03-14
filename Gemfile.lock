@@ -103,7 +103,7 @@ GEM
       cocaine (~> 0.5.5)
       mime-types
       mimemagic (= 0.3.0)
-    pg (0.18.4-x86-mingw32)
+    pg (0.18.4)
     puma (2.16.0)
     puma (2.16.0-java)
     rack (1.6.4)
