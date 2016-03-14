@@ -83,6 +83,15 @@
   <% end %>
 
 
+    <p> About me....</p><br>
+  </p>
+
+  <p><%= @user.description %><br></p>
+
+
+
+
+
 </div>
 <div class="friends">
   Friends List Placeholder <br>
@@ -96,11 +105,23 @@
   <img src="/assets/ballon.jpg"  width=50px, height=50px />
 
 
-
-
-
-
-
+</div>
+<!-- Twitter Feed -->
+<!--style="margin-left:25%;"-->
+<div style="margin-left:10%; width:85%";>
+  <div class="floating" style="margin-right: 160px;">
+    <div>
+        <a class="twitter-timeline"
+        href="https://twitter.com/" << "<%=@user.twitter_name%>"
+        data-screen-name="<%=@user.twitter_name%>"
+        data-widget-id="706651821549355009">Tweets by <%= @user.twitter_name %><br>
+        </a>
+        <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';
+          if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}
+          (document,"script","twitter-wjs");
+        </script>
+    </div>
+  </div>
 
 </div>
 

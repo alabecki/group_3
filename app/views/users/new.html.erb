@@ -52,6 +52,10 @@
         <%= f.label :description %><br>
         <%= f.text_area :description, class: 'form-control'%><br>
 
+        <%= f.label :twitter_name %><br>
+        <%= f.text_field :twitter_name, class: 'form-control' %><br>
+
+
          <%= f.label :password %><br>
       <%= f.password_field :password, class: 'form-control' %><br>
 
@@ -60,6 +64,7 @@
 
       <%= f.label :avatar %><br>
       <%= f.file_field :avatar, class: 'form-control' %><br>
+
 
 
         <%= f.submit "Create my account", class: "btn btn-primary" %>
