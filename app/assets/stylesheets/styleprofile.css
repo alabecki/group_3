@@ -24,7 +24,7 @@ body{
  position: relative;;
 
   padding: 10px;
-  left: 500px;
+  left: 400px;
   text-align: left;
   background-color: #1a1a1a;
   width: 350px;
@@ -38,10 +38,19 @@ body{
 
 }
 
+.twitterinfo{
+  position: absolute;
+
+margin-left: 800px;
+top: 450px;
+
+
+
+}
 .friends{
 position: absolute;
  top: 200px;
- right: 100px;
+ right: 200px;
   margin-left: 600px;
   background-color: #1a1a1a;
   width: 350px;
