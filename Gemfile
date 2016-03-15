@@ -1,5 +1,5 @@
 source 'https://rubygems.org'
-ruby '2.1.5'#, :engine => 'jruby', :engine_version => '9.0.5.0'
+ruby '2.2.3', :engine => 'jruby', :engine_version => '9.0.5.0'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.5.1'
@@ -23,8 +23,8 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 
 #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 #The databases (comment out one)
-gem 'pg'	#not Windows
-#gem 'activerecord-jdbcpostgresql-adapter' #Windows
+#gem 'pg'	#not Windows
+gem 'activerecord-jdbcpostgresql-adapter' #Windows
 #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
