@@ -91,7 +91,6 @@ class UsersController < ApplicationController
 
     def user_params
       params.require(:user).permit(:username, :email, :password, :street_address, :city, :state, :country, :postal_code,
-<<<<<<< HEAD
                                    :password_confirmation, :lol, :dota2, :smite, :hots, :description, :twitter_name, :avatar)
     end
 
