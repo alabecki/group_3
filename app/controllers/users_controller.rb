@@ -49,7 +49,7 @@ class UsersController < ApplicationController
       marker.lng user.longitude
       marker.infowindow render_to_string(:partial => "/users/infobox", :locals => {:username => user.username, :lol => user.lol, :dota2 => user.dota2, :smite => user.smite, :hots => user.hots, :id => user.id})
     end
-    
+
   end
 
 
@@ -91,7 +91,7 @@ class UsersController < ApplicationController
 
     def user_params
       params.require(:user).permit(:username, :email, :password, :street_address, :city, :state, :country, :postal_code,
-                                   :password_confirmation, :lol, :dota2, :smite, :hots, :description, :avatar,  :twitter_name)
+                                   :password_confirmation, :lol, :dota2, :smite, :hots, :description, :avatar, :twitter_name)
     end
 
 def correct_user
