@@ -125,7 +125,7 @@
   <img src="/assets/border.png"  width=100%, height=100px />
 
 
-  <h2> Add Comment Placeholder</h2>
+  <h2> <%=@user.username %>'s Comment Feed</h2>
   <div class="comments"; style = "padding-left: 80px";>
     <% if logged_in? %>
       <div class="row">
@@ -137,6 +137,16 @@
             <%= render 'shared/micropost_form' %>
           </section>
         </aside>
+<%
+=begin
+%> ****Code to display the microposts feed****
+        <div class="col-md-8">
+          <h3>Micropost Feed</h3>
+          <%= render 'shared/feed' %>
+        </div>
+<%
+=end
+%>
       </div>
     <% end %>
     <% if @user.microposts.any? %>

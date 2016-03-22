@@ -110,6 +110,10 @@ validates_attachment_content_type :avatar, :content_type => /\Aimage\/.*\Z/
     #micropost association
   has_many :microposts, dependent: :destroy
 
+  def feed
+    Micropost.where("user_id = ?", id)
+  end
+
 
 private
 
