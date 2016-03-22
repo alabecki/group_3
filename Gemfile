@@ -60,3 +60,10 @@ gem 'rake', '10.5.0'
 #PaperClip
 gem 'paperclip'
 gem 'aws-sdk', '< 2.0'
+
+#Testing
+group  :development, :test do
+    gem 'capybara'
+    gem 'rspec-rails'
+    gem 'factory_girl_rails'
+end
