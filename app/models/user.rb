@@ -107,6 +107,9 @@ validates_attachment_content_type :avatar, :content_type => /\Aimage\/.*\Z/
     reset_sent_at < 2.hours.ago
   end
 
+    #micropost association
+  has_many :microposts, dependent: :destroy
+
 
 private
 
