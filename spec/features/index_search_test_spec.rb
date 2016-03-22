@@ -4,11 +4,13 @@ require 'rails_helper'
 
 describe "index search" do
     before(:each) do
-        user = FactoryGirl.create(:user, :username => "jdoe", :password => "secret")
-        visit "/login"
-        fill_in "Username", :with => "jdoe"
-        fill_in "Password", :with => "secret"
+        user = FactoryGirl.create(:user)
+        admin = FactoryGirl.create(:admin)
+        visit "login"
+        fill_in "Email", :with => "qwerty@example.ca"
+        fill_in "Password", :with => "password"
         click_button "Log in"
+        expect(current_url).to include "users/"
     end
     
     it "search reset" do
@@ -29,6 +31,10 @@ describe "index search" do
         check('League of Legends')
         click_button 'Search by Game'
         expect(current_url).to include("lol=true", "dota2=false", "smite=false", "hots=false")
+        expect(page).to have_content "Jim"
+        expect(page).to_not have_content "Admin"
+        expect(page).to_not have_content 'Sorry there are no users that follow that criteria'
+        
     end
     
     it "dota search" do
@@ -36,6 +42,9 @@ describe "index search" do
         check('Dota 2')
         click_button 'Search by Game'
         expect(current_url).to include("lol=false", "dota2=true", "smite=false", "hots=false")
+        expect(page).to_not have_content "Jim"
+        expect(page).to have_content "Admin"
+        expect(page).to_not have_content 'Sorry there are no users that follow that criteria'
     end
     
     it "heroes search" do
@@ -59,13 +68,25 @@ describe "index search" do
         check("Smite")
         click_button 'Search by Game'
         expect(current_url).to include("lol=true", "dota2=true", "smite=true", "hots=false")
+        expect(page).to have_content "Jim"
+        expect(page).to have_content "Admin"
+        expect(page).to_not have_content 'Sorry there are no users that follow that criteria'
     end
     
     it "user search" do
        visit users_path
-       fill_in 'Search Users', :with => "Joe"
+       fill_in 'Search Users', :with => "Jim"
        click_button 'Search'
-       expect(current_url).to include "search=Joe"
+       expect(page).to have_content "Jim"
+       expect(page).to_not have_content "Admin"
+       expect(page).to_not have_content "Sorry there are no users that follow that criteria"
+       
+       visit users_path
+       fill_in 'Search Users', :with => "i"
+       click_button 'Search'
+       expect(page).to have_content "Jim"
+       expect(page).to have_content "Admin"
+       expect(page).to_not have_content "Sorry there are no users that follow that criteria"
     end
     
     
