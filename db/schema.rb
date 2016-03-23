@@ -51,11 +51,11 @@ ActiveRecord::Schema.define(version: 20160318211849) do
     t.string   "state"
     t.string   "reset_digest"
     t.datetime "reset_sent_at"
-    t.string   "twitter_name"
     t.string   "avatar_file_name"
     t.string   "avatar_content_type"
     t.integer  "avatar_file_size"
     t.datetime "avatar_updated_at"
+    t.string   "twitter_name"
   end
 
   add_foreign_key "microposts", "users"

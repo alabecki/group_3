@@ -1,4 +1,5 @@
 <li id="micropost-<%= micropost.id %>">
+  <%= image_tag @micropost.user.avatar.url(:small) %>
   <span class="user"><%= link_to micropost.user.username, micropost.user %></span>
   <span class="content"><%= micropost.content %></span>
   <span class="timestamp">
