@@ -17,7 +17,5 @@ validates_attachment_content_type :avatar, :content_type => /\Aimage\/.*\Z/
   validates :content, presence: true, length: { maximum: 140 }
   
 
-
-
 end
 
