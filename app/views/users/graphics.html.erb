@@ -1,0 +1,14 @@
+<%= javascript_include_tag "https://www.google.com/jsapi", "chartkick" %>
+<div style="padding-top:50px">
+    <%= pie_chart User.group(:city).count %>
+</div>
+
+<div>
+    <%= geo_chart User.group(:country).count %>
+</div>
+<div>
+    <%= column_chart({"League" => User.group(:lol).count})
+        
+        
+     %>
+</div>

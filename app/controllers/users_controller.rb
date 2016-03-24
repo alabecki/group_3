@@ -85,6 +85,10 @@ class UsersController < ApplicationController
     flash[:success] = "User deleted"
     redirect_to users_url
   end
+  
+  def graphics
+    @users = User.all
+  end
 
 
   private

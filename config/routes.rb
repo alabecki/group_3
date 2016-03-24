@@ -6,6 +6,7 @@ Rails.application.routes.draw do
   resources :users
   get 'users/new'
   get 'maps' => 'users#map'
+  get 'graphics' => 'users#graphics'
  
   get    'login'   => 'sessions#new'
   post   'login'   => 'sessions#create'
