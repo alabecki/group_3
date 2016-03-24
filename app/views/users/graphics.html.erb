@@ -1,14 +1,25 @@
 <%= javascript_include_tag "https://www.google.com/jsapi", "chartkick" %>
-<div style="padding-top:50px">
+<div style="padding-top:70px; float:left; width:50%; text-align:center">
+    <h2>Highest Traffic Cities</h2>
+    <br />
     <%= pie_chart User.group(:city).count %>
 </div>
 
-<div>
+<div style="display:inline-block; width:50%; padding-top:70px; text-align:center">
+    <h2>Highest Traffic Countries</h2>
+    <br />
     <%= geo_chart User.group(:country).count %>
 </div>
-<div>
-    <%= column_chart({"League" => User.group(:lol).count})
+<div style="display:inline-block; width:50%; padding-top:70px; text-align:center">
+    <h2>Most Popular Games</h2>
+    <br />
+    <%= column_chart(
+        {"League of Legends" => @lolcount,
+        "Dota 2" => @dotacount,
+        "Heroes of the Storm" => @hotscount,
+        "Smite" => @smitecount}
+    )
         
         
-     %>
+    %>
 </div>

@@ -88,6 +88,10 @@ class UsersController < ApplicationController
   
   def graphics
     @users = User.all
+    @lolcount = User.count('lol', true)
+    @dotacount = User.count('dota2', true)
+    @hotscount = User.count('hots', true)
+    @smitecount = User.count('smite', true)
   end
 
 
