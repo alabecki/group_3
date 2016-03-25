@@ -1,7 +1,7 @@
 class User<ActiveRecord::Base
 
 #PaperClip
-has_attached_file :avatar, :styles => {medium: '200x200'},
+has_attached_file :avatar, :styles => {medium: '200x200', thumb: '100x100'},
 
 :s3_credentials => {
   :bucket =>'group3dev',
