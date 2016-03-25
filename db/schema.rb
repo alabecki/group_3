@@ -11,11 +11,16 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
+<<<<<<< HEAD
 ActiveRecord::Schema.define(version: 20160323070712) do
+=======
+ActiveRecord::Schema.define(version: 20160312042633) do
+>>>>>>> 3316dbe249a07481d162d96d18a76a6cd0b7ade6
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
+<<<<<<< HEAD
   create_table "microposts", force: :cascade do |t|
     t.text     "content"
     t.integer  "user_id"
@@ -30,6 +35,8 @@ ActiveRecord::Schema.define(version: 20160323070712) do
   add_index "microposts", ["user_id", "created_at"], name: "index_microposts_on_user_id_and_created_at", using: :btree
   add_index "microposts", ["user_id"], name: "index_microposts_on_user_id", using: :btree
 
+=======
+>>>>>>> 3316dbe249a07481d162d96d18a76a6cd0b7ade6
   create_table "users", force: :cascade do |t|
     t.string   "username"
     t.string   "email"
@@ -55,12 +62,21 @@ ActiveRecord::Schema.define(version: 20160323070712) do
     t.string   "state"
     t.string   "reset_digest"
     t.datetime "reset_sent_at"
+<<<<<<< HEAD
+=======
+    t.string   "twitter_name"
+>>>>>>> 3316dbe249a07481d162d96d18a76a6cd0b7ade6
     t.string   "avatar_file_name"
     t.string   "avatar_content_type"
     t.integer  "avatar_file_size"
     t.datetime "avatar_updated_at"
+<<<<<<< HEAD
     t.string   "twitter_name"
   end
 
   add_foreign_key "microposts", "users"
+=======
+  end
+
+>>>>>>> 3316dbe249a07481d162d96d18a76a6cd0b7ade6
 end
