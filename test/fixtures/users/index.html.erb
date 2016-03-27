@@ -1,0 +1,77 @@
+<!--Listing all users page-->
+<% provide(:title, 'All users') %>
+<div class="container">
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+		<h1>All users</h1>
+		<br />
+		<!-- Search Bar -->
+		<% if @users.present? %>
+		  <!-- Print nothing -->
+		<% else %>
+		  <p style="color:red">Sorry there are no users that follow that criteria </p>
+		  <% render @users %>
+		<% end %>
+
+		<!-- Username Search -->
+		<div style="color:black">
+			<%= form_tag(users_path, :method => "get", id: "search-form") do %>
+				<%= text_field_tag :search, params[:search], placeholder: "Search Users" %>
+				<%= submit_tag "Search" %>
+				<br />
+				<!-- Game Search -->
+				<div style="color:white; display: inline-block; padding-top:20px">
+					<%= form_tag(users_path, :method => "get", id: "search-form") do %>
+
+						<%= hidden_field_tag :lol, 'false' %>
+						<%= check_box_tag :lol, 'true' %>
+						<%= label_tag(:lol, "League of Legends") %>
+
+						<%= hidden_field_tag :dota2, 'false' %>
+						<%= check_box_tag :dota2, 'true' %>
+						<%= label_tag(:dota2, "Dota 2") %>
+
+						<%= hidden_field_tag :smite, 'false' %>
+						<%= check_box_tag :smite, 'true' %>
+						<%= label_tag(:smite, "Smite") %>
+
+						<%= hidden_field_tag :hots, 'false' %>
+						<%= check_box_tag :hots, 'true' %>
+						<%= label_tag(:hots, "Heroes of the Storm") %>
+						
+						<div style="color:black; float:right; margin-left:5px"><%= submit_tag "Search by Game" %></div>
+						
+					<% end %>	
+				</div>
+			<% end %>
+		</div>
+		<%= link_to 'Reset', users_path %>
+		<br />
+		<br />
+
+		<%= will_paginate %>
+		<ul class="users">
+		  <%= render @users %>
+		</ul>
+		<%= will_paginate %>
+
+
+	<br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+	<br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+</div>
