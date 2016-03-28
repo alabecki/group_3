@@ -24,7 +24,8 @@ hr{
 </style>
 
 <div class="box">
-	<%= image_tag @current_user.avatar.url(:thumb), :class => "image_style" %>
+	<!--<%= image_tag @current_user.avatar.url(:thumb), :class => "image_style" %>-->
+	<%= image_tag user.avatar.url(:medium), :class => "image_style" %>
 	<%= link_to user.username, user, :class => "name_style" %>
 	<% if current_user.admin? && !current_user?(user) %>
     	| <%= link_to "delete", user, method: :delete, data: { confirm: "You sure?" } %>
