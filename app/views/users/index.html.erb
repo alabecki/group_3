@@ -1,4 +1,19 @@
 <!--Listing all users page-->
+<style>
+.image{
+	background-color: #071d3b;
+	color: blue;
+	width: 850px;
+}
+
+hr{
+	border-width: 3px;
+	border-color: #cbcbcb;
+	margin-right: 50px;	
+	width: 95%;
+}
+
+</style>
 <% provide(:title, 'All users') %>
 <div class="container">
     <br />
@@ -53,12 +68,16 @@
 		<%= link_to 'Reset', users_path %>
 		<br />
 		<br />
-	
+		<br />
 		<%= will_paginate %>
-		<ul class="users">
-		  <%= render @users %>
+		<ul class="image">
+			<br />
+			<hr >
+		  	<%= render @users %>  
+		 	<br />
 		</ul>
 		<%= will_paginate %>
+
 
 	<br />
     <br />
