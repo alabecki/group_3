@@ -1,7 +1,7 @@
 class User<ActiveRecord::Base
 
 #PaperClip
-has_attached_file :avatar, :styles => {medium: '200x200'},
+has_attached_file :avatar, :styles => {medium: '200x200', thumb: '100x100'},
 
 :s3_credentials => {
   :bucket =>'group3dev',
@@ -105,6 +105,13 @@ validates_attachment_content_type :avatar, :content_type => /\Aimage\/.*\Z/
     # Returns true if a password reset has expired.
   def password_reset_expired?
     reset_sent_at < 2.hours.ago
+  end
+
+    #micropost association
+  has_many :microposts, dependent: :destroy
+
+  def feed
+    Micropost.where("user_id = ?", id)
   end
 
 

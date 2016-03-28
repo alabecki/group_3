@@ -53,6 +53,7 @@ gem 'gmaps4rails'
 gem 'will_paginate',           '3.0.7'
 gem 'bootstrap-will_paginate', '0.0.10'
 
+#gem 'faker'
 
 gem 'rake', '10.5.0'
 

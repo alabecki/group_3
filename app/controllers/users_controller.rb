@@ -19,13 +19,18 @@ class UsersController < ApplicationController
   end
 
 
-
   def show
     @user = User.find(params[:id])
+    @microposts = @user.microposts.paginate(page: params[:page])
+    if logged_in?
+      @micropost  = current_user.microposts.build
+      @feed_items = current_user.feed.paginate(page: params[:page])
+    end
   end
 
   def new
     @user = User.new
+
   end
 
 
@@ -96,14 +101,6 @@ class UsersController < ApplicationController
 def correct_user
       @user = User.find(params[:id])
       redirect_to(root_url) unless current_user?(@user)
-end
-
-def logged_in_user
-      unless logged_in?
-        store_location
-        flash[:danger] = "Please log in."
-        redirect_to login_url
-      end
 end
 
 def admin_user
