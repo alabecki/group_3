@@ -6,6 +6,11 @@
 	width: 850px;
 }
 
+.containerjumbotron{
+	width: 900px;
+    margin: 0 auto;	
+}
+
 .label_style{
 	font-size: 18px;
 	margin-right: 15px;
@@ -20,7 +25,7 @@ hr{
 
 </style>
 <% provide(:title, 'All users') %>
-<div class="container">
+<div class="container containerjumbotron">
     <br />
     <br />
     <br />
@@ -41,7 +46,7 @@ hr{
 		<!-- Username Search -->
 		<div style="color:black">
 			<%= form_tag(users_path, :method => "get", id: "search-form") do %>
-				<%= text_field_tag :search, params[:search], placeholder: "Search Users", :style => "height:42px;" %>
+				<%= text_field_tag :search, params[:search], placeholder: "Search Users", :style => "height: 42px;" %>
 				<%= submit_tag "Search", :class => "btn btn-primary btn-lg" %>
 				<br />
 				<!-- Game Search -->
@@ -70,7 +75,7 @@ hr{
 				</div>
 			<% end %>
 		</div>
-		<%= link_to 'Reset', users_path %>
+		<%= link_to 'Reset', users_path, :style => "font-size: 18px;" %>
 		<br />
 		<br />
 		<br />
