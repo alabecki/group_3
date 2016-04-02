@@ -83,34 +83,17 @@
   <% end %>
 
 
-
-
 </div>
 <div class="friends">
   <br>
-   
-<% provide(:title, @title) %>
-<div class="row">
-  <aside class="col-md-4">
-    <section class="stats">
-      <%= render 'shared/stats' %>
-      <% if @users %>                     <%# needs to be fixed. want to use if @users.any? but get undfined method %>
-        <div class="user_avatars">
-          <% @users.each do |user| %>
-          <%= image_tag @user.avatar.url(:thumb) %>
-             <%= will_paginate %>
-            
-          <% end %>
-        </div>
-      <% end %>
-    </section>
-  </aside>
-  
-</div>
-   
-     <%= render 'follow_form' if logged_in? %>
-
-
+  <%= render 'shared/stats' %>
+  <%= render 'follow_form' if logged_in? %>
+  <img src="/assets/ballon.jpg"  width=50px, height=50px />
+  <img src="/assets/ballon.jpg"  width=50px, height=50px />
+  <img src="/assets/ballon.jpg"  width=50px, height=50px />
+  <img src="/assets/ballon.jpg"  width=50px, height=50px />
+  <img src="/assets/ballon.jpg"  width=50px, height=50px />
+  <img src="/assets/ballon.jpg"  width=50px, height=50px />
   <img src="/assets/ballon.jpg"  width=50px, height=50px />
   <img src="/assets/ballon.jpg"  width=50px, height=50px />
 
