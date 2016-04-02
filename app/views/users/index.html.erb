@@ -1,5 +1,3 @@
-
-
 <!--Listing all users page-->
 <style>
 .image{
@@ -69,19 +67,11 @@ hr{
 
 						<%= hidden_field_tag :hots, 'false' %>
 						<%= check_box_tag :hots, 'true' %>
-<<<<<<< HEAD
 						<%= label_tag(:hots, "Heroes of the Storm", :class => "label_style") %>
 				
 						<%= submit_tag "Search by Game", :class => "btn btn-primary btn-lg" %>
 
 					<% end %>	
-=======
-						<%= label_tag(:hots, "Heroes of the Storm") %>
-
-						<div style="color:black; float:right; margin-left:5px"><%= submit_tag "Search" %></div>
-
-					<% end %>
->>>>>>> relationships
 				</div>
 			<% end %>
 		</div>
@@ -97,6 +87,8 @@ hr{
 		 	<br />
 		</ul>
 		<%= will_paginate %>
+
+
 	<br />
     <br />
     <br />
