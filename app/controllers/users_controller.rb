@@ -20,7 +20,6 @@ class UsersController < ApplicationController
     if params[:lol] == "true" || params[:dota2] == "true" || params[:smite] == "true" || params[:hots] == "true"
       @users = User.gameSearch(params[:lol], params[:dota2], params[:smite], params[:hots] ).paginate(page: params[:page])
     end
-
   end
 
 
