@@ -164,8 +164,10 @@ h1{
 </p>
 
 <p class="strong">
-  <strong> State/Province: </strong>
-  <%= @user.state %><br>
+  <% if @user.state and @user.state != "" %>
+    <strong> State/Province: </strong>
+    <%= @user.state %><br>
+  <% end %>
 </p>
 
 
@@ -175,8 +177,10 @@ h1{
 </p>
 
 <p class="postal">
-  <strong> Postal Code: </strong>
-  postal code <%= @user.postal_code %><br>
+  <% if @user.postal_code and @user.postal_code != "" %>
+    <strong> Postal Code: </strong>
+    <%= @user.postal_code %><br>
+  <% end %>
 </p>
 <br>
 <p class="game">
