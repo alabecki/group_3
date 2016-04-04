@@ -130,14 +130,12 @@ h1{
 <h1><%= @user.username %> </h1>
 </div>
 </div>
-
-<div class="aboutme">
-   About me....<br>
-
-<%= @user.description %><br>
-
-
-</div>
+<% if @user.description and @user.description != "" %>
+  <div class="aboutme">
+     About me<br>
+  <%= @user.description %><br>
+  </div>
+<% end %>
 
 
 <div class="info">
@@ -184,22 +182,24 @@ h1{
 </p>
 <br>
 <p class="game">
-  <p> Games Played:</p>
-  <% if @user.lol == true %>
-
-    <img src="http://i.imgur.com/1FkXKCM.png" alt="logo" width=290px height=130px />
-  <% end %>
-
-  <% if @user.dota2 == true %>
-  <img src="http://i.imgur.com/8omtByM.png" alt="logo" width=290px height=170px />
-  <% end %>
-
-    <% if @user.smite == true %>
-  <img src="http://i.imgur.com/xAIRHRf.png" alt="logo" width=290px height=90px />
-  <% end %>
-
-  <% if @user.hots == true %>
-  <img src="http://i.imgur.com/HOIyxUH.png" alt="logo" width=290px height=150px />
+  <% if @user.lol == true or @user.dota2 == true or @user.smite == true or @user.hots == true %>
+    <p> Games Played:</p>
+    <% if @user.lol == true %>
+  
+      <img src="http://i.imgur.com/1FkXKCM.png" alt="logo" width=290px height=130px />
+    <% end %>
+  
+    <% if @user.dota2 == true %>
+    <img src="http://i.imgur.com/8omtByM.png" alt="logo" width=290px height=170px />
+    <% end %>
+  
+      <% if @user.smite == true %>
+    <img src="http://i.imgur.com/xAIRHRf.png" alt="logo" width=290px height=90px />
+    <% end %>
+  
+    <% if @user.hots == true %>
+    <img src="http://i.imgur.com/HOIyxUH.png" alt="logo" width=290px height=150px />
+    <% end %>
   <% end %>
 
 

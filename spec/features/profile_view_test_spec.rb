@@ -27,7 +27,7 @@ describe "profile view tests" do
         click_link('PROFILE', match: :first)
         expect(page).to_not have_content "State/Province"
         
-        # Add a postal code
+        # Add a province
         click_link('SETTINGS')
         fill_in 'State', :with => 'BC'
         click_button 'Save changes'
