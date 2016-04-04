@@ -1,5 +1,5 @@
 source 'https://rubygems.org'
-ruby '2.2.2', :engine => 'jruby', :engine_version => '9.0.0.0'
+#ruby '2.2.2', :engine => 'jruby', :engine_version => '9.0.0.0'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.5.1'
@@ -23,8 +23,8 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 
 #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 #The databases (comment out one)
-#gem 'pg'	#not Windows
-gem 'activerecord-jdbcpostgresql-adapter' #Windows
+gem 'pg'	#not Windows
+#gem 'activerecord-jdbcpostgresql-adapter' #Windows
 #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -68,9 +68,7 @@ group  :development, :test do
     gem 'rspec-rails'
     gem 'factory_girl_rails'
 end
-<<<<<<< HEAD
 
 # Graphics
 gem "chartkick"
-=======
->>>>>>> b9539cf3379ff35d90179b8b1678c329ea3a581a
+

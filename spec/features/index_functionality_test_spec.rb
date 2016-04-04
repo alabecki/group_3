@@ -2,7 +2,7 @@ require 'rails_helper'
 
 
 
-describe "index search" do
+describe "index functionality" do
     before(:each) do
         user = FactoryGirl.create(:user)
         admin = FactoryGirl.create(:admin)
@@ -11,6 +11,11 @@ describe "index search" do
         fill_in "Password", :with => "password"
         click_button "Log in"
         expect(current_url).to include "users/"
+    end
+    
+    it "hides broken img if no avatar" do
+        visit users_path
+        expect(page).to_not have_content "Missing" #Broken image display message
     end
     
     it "search reset" do
@@ -88,6 +93,6 @@ describe "index search" do
        expect(page).to have_content "Admin"
        expect(page).to_not have_content "Sorry there are no users that follow that criteria"
     end
-    
-    
+
 end
+    

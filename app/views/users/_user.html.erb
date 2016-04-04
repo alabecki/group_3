@@ -47,7 +47,9 @@
 </style>
 
 <div class="box">
-	<%= image_tag user.avatar.url(:medium), :class => "image_style" %>
+	<% if user.avatar_file_name %> 
+		<%= image_tag user.avatar.url(:medium), :class => "image_style" %>
+	<% end %>
 	<div class="innerbox">
 		<%= link_to user.username, user, :class => "name_style" %>
 		<hr class="hr2">
