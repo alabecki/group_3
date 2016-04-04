@@ -13,10 +13,6 @@ describe "index functionality" do
         expect(current_url).to include "users/"
     end
     
-    it "hides broken img if no avatar" do
-        visit users_path
-        expect(page).to_not have_content "Missing" #Broken image display message
-    end
     
     it "search reset" do
         visit users_path
