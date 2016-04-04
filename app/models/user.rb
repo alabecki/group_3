@@ -1,7 +1,17 @@
 class User<ActiveRecord::Base
 
 #PaperClip
-has_attached_file :avatar, :styles => {medium: '200x200', thumb: '100x100'}, :default_url => ":medium/ballon.jpg",
+#has_attached_file :avatar, :styles => {medium: '200x200', thumb: '100x100'}, 
+#:default_url => ":medium/ballon.jpg",
+
+has_attached_file :avatar,
+   :styles => {medium: '200x200', thumb: '100x100'},    
+   :default_url => lambda { |avatar| avatar.instance.set_default_url}
+
+def set_default_url
+  ActionController::Base.helpers.asset_path('logo.png')
+end
+
 
 :s3_credentials => {
   :bucket =>'group3dev',
