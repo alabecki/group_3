@@ -13,7 +13,20 @@
 	color: white;
 	font-size: 30px;
 	margin-left: 30px;
+	margin-top: 10px;
 }
+
+.city_style{
+	color: white;
+	background-color: #337ab7;
+	font-size: 15px;
+	margin-left: 30px;
+}
+
+.innerbox{
+	display:inline-block;
+}
+
 
 hr{
 	border-width: 3px;
@@ -26,7 +39,12 @@ hr{
 <div class="box">
 	<!--<%= image_tag @current_user.avatar.url(:thumb), :class => "image_style" %>-->
 	<%= image_tag user.avatar.url(:medium), :class => "image_style" %>
-	<%= link_to user.username, user, :class => "name_style" %>
+	<div class="innerbox">
+		<%= link_to user.username, user, :class => "name_style" %>
+		<div class="city_style">
+		<%= user.city %>
+		</div>
+	</div>
 	<% if current_user.admin? && !current_user?(user) %>
     	| <%= link_to "delete", user, method: :delete, data: { confirm: "You sure?" } %>
   	<% end %>
