@@ -15,6 +15,7 @@ RSpec.describe UsersController, :type => :controller do
             assigns(:dotacount).should == 2
             assigns(:hotscount).should == 1
             assigns(:smitecount).should == 1
+            assigns(:usercount).should == 4
         end
     end
 end

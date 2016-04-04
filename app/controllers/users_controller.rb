@@ -92,6 +92,7 @@ class UsersController < ApplicationController
     @dotacount = User.count('dota2', true)
     @hotscount = User.count('hots', true)
     @smitecount = User.count('smite', true)
+    @usercount = User.count
   end
 
 
