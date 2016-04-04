@@ -1,0 +1,165 @@
+<%= stylesheet_link_tag "styleprofile" %>
+<!DOCTYPE html>
+<html>
+
+
+
+  <img src="/assets/border.png"  width=100%, height=100px />
+<div class="picture">
+<div class="profile">
+
+<%= image_tag @user.avatar.url(:medium) %>
+</div>
+<div >
+<h1><%= @user.username %> </h1>
+</div>
+</div>
+
+<div class="aboutme">
+   About me....<br>
+
+<%= @user.description %><br>
+
+
+</div>
+
+
+<div class="info">
+
+  <h2> Info: </h2>
+  <br>
+  <br>
+
+
+<p class="email">
+  <strong> Email: </strong>
+  <%= @user.email %>
+
+</p>
+<br>
+<p class="street">
+  <strong> Street: </strong>
+   <%= @user.street_address %><br>
+</p>
+
+<p class="strong">
+  <strong> City: </strong>
+  <%= @user.city %><br>
+</p>
+
+<p class="strong">
+  <strong> State/Province: </strong>
+  <%= @user.state %><br>
+</p>
+
+
+<p class="country">
+  <strong> Country: </stong>
+  <%= @user.country %><br>
+</p>
+
+<p class="postal">
+  <strong> Postal Code: </strong>
+  postal code <%= @user.postal_code %><br>
+</p>
+<br>
+<p class="game">
+  <p> Games Played:</p>
+  <% if @user.lol == true %>
+
+    <img src="/assets/logo-league.png" alt="logo" width=290px height=130px />
+  <% end %>
+
+  <% if @user.dota2 == true %>
+  <img src="/assets/logo-dota.png" alt="logo" width=290px height=170px />
+  <% end %>
+
+    <% if @user.smite == true %>
+  <img src="/assets/logo-smite.png" alt="logo" width=290px height=90px />
+  <% end %>
+
+  <% if @user.hots == true %>
+  <img src="/assets/logo-heroes.png" alt="logo" width=290px height=150px />
+  <% end %>
+
+
+</div>
+<div class="friends">
+  <br>
+  <%= render 'shared/stats' %>
+  <%= render 'follow_form' if logged_in? %>
+  <img src="/assets/ballon.jpg"  width=50px, height=50px />
+  <img src="/assets/ballon.jpg"  width=50px, height=50px />
+  <img src="/assets/ballon.jpg"  width=50px, height=50px />
+  <img src="/assets/ballon.jpg"  width=50px, height=50px />
+  <img src="/assets/ballon.jpg"  width=50px, height=50px />
+  <img src="/assets/ballon.jpg"  width=50px, height=50px />
+  <img src="/assets/ballon.jpg"  width=50px, height=50px />
+  <img src="/assets/ballon.jpg"  width=50px, height=50px />
+
+
+</div>
+<!-- Twitter Feed -->
+<!--style="margin-left:25%;"-->
+<div class="twitterinfo">
+  <div class="floating" style="margin-right: 160px;">
+    <div>
+        <a class="twitter-timeline"
+        href="https://twitter.com/" << "<%=@user.twitter_name%>"
+        data-screen-name="<%=@user.twitter_name%>"
+        data-widget-id="706651821549355009">Tweets by <%= @user.twitter_name %><br>
+        </a>
+        <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';
+          if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}
+          (document,"script","twitter-wjs");
+        </script>
+    </div>
+  </div>
+
+</div>
+
+<br>
+<br>
+<br>
+
+  <img src="/assets/border.png"  width=100%, height=100px />
+
+
+  <h2> <%=@user.username %>'s Comment Feed</h2>
+  <div class="comments"; style = "padding-left: 80px";>
+    <% if logged_in? %>
+      <div class="row">
+        <aside>
+          <section class="user_info">
+            <%= render 'shared/user_info' %>
+          </section>
+          <section class="micropost_form">
+            <%= render 'shared/micropost_form' %>
+          </section>
+        </aside>
+<%
+=begin
+%> ****Code to display the microposts feed****
+        <div class="col-md-8">
+          <h3>Micropost Feed</h3>
+          <%= render 'shared/feed' %>
+        </div>
+<%
+=end
+%>
+      </div>
+    <% end %>
+    <% if @user.microposts.any? %>
+      <h3>Comments (<%= @user.microposts.count %>)</h3>
+      <ol class="microposts">
+        <%= render @microposts %>
+      </ol>
+      <%= will_paginate @microposts %>
+    <% end %>
+  </div>
+
+   </div>
+   <img src="/assets/border.png"  width=100%, height=100px />
+
+
+</html>

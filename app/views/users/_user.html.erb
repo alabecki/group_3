@@ -1,7 +1,62 @@
-<li>
-  <%= link_to user.username, user %>
-  <% if current_user.admin? && !current_user?(user) %>
-    | <%= link_to "delete", user, method: :delete,
-                                  data: { confirm: "You sure?" } %>
-  <% end %>
-</li>
+<style>
+.box{	
+	height: 160px;
+	width: 700px;
+}
+
+.image_style {
+  height: 150px;
+  width: 155px;
+  margin-bottom: 70px;
+}
+
+.name_style{
+	color: white;
+	font-size: 30px;
+	margin-left: 30px;
+	margin-top: 10px;
+}
+
+.city_style{
+	color: white;
+	font-size: 15px;
+	margin-left: 30px;
+	margin-top: 5px;
+}
+
+.innerbox{
+	margin-top: 50px;
+	display:inline-block;
+}
+
+.hr1{
+	border-width: 3px;
+	border-color: #cbcbcb;
+	margin-right: 50px;	
+	width: 95%;
+}
+
+.hr2{
+	border-width: 4px;
+	border-color: #337ab7;	
+	width: 80%;
+	margin-top: 1px;
+	margin-bottom: 1px;
+	margin-left: 30px;
+}
+</style>
+
+<div class="box">
+	<%= image_tag user.avatar.url(:medium), :class => "image_style" %>
+	<div class="innerbox">
+		<%= link_to user.username, user, :class => "name_style" %>
+		<hr class="hr2">
+		<div class="city_style">
+			<%= user.city %>
+		</div>
+	</div>
+	<% if current_user.admin? && !current_user?(user) %>
+    	| <%= link_to "delete", user, method: :delete, data: { confirm: "You sure?" } %>
+  	<% end %>
+</div>
+<hr class="hr1">

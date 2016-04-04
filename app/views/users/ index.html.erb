@@ -1,0 +1,103 @@
+<!--Listing all users page-->
+<style>
+.image{
+	background-color: #071d3b;
+	color: blue;
+	width: 850px;
+}
+
+.containerjumbotron{
+	width: 900px;
+    margin: 0 auto;	
+}
+
+.label_style{
+	font-size: 18px;
+	margin-right: 15px;
+}
+
+hr{
+	border-width: 3px;
+	border-color: #cbcbcb;
+	margin-right: 50px;	
+	width: 95%;
+}
+
+</style>
+<% provide(:title, 'All users') %>
+<div class="container containerjumbotron">
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+		<h1>All users</h1>
+		<br />
+		<!-- Search Bar -->
+		<% if @users.present? %>
+		  <!-- Print nothing -->
+		<% else %>
+		  <p style="color:red">Sorry there are no users that follow that criteria </p>
+		  <% render @users %>
+		<% end %>
+
+		<!-- Username Search -->
+		<div style="color:black">
+			<%= form_tag(users_path, :method => "get", id: "search-form") do %>
+				<%= text_field_tag :search, params[:search], placeholder: "Search Users", :style => "height: 42px;" %>
+				<%= submit_tag "Search", :class => "btn btn-primary btn-lg" %>
+				<br />
+				<!-- Game Search -->
+				<div style="color:white; display: inline-block; padding-top:20px">
+					<%= form_tag(users_path, :method => "get", id: "search-form") do %>
+
+						<%= hidden_field_tag :lol, 'false' %>
+						<%= check_box_tag :lol, 'true' %>
+						<%= label_tag(:lol, "League of Legends", :class => "label_style") %>
+
+						<%= hidden_field_tag :dota2, 'false' %>
+						<%= check_box_tag :dota2, 'true' %>
+						<%= label_tag(:dota2, "Dota 2", :class => "label_style") %>
+
+						<%= hidden_field_tag :smite, 'false' %>
+						<%= check_box_tag :smite, 'true' %>
+						<%= label_tag(:smite, "Smite", :class => "label_style") %>
+
+						<%= hidden_field_tag :hots, 'false' %>
+						<%= check_box_tag :hots, 'true' %>
+						<%= label_tag(:hots, "Heroes of the Storm", :class => "label_style") %>
+				
+						<%= submit_tag "Search by Game", :class => "btn btn-primary btn-lg" %>
+
+					<% end %>	
+				</div>
+			<% end %>
+		</div>
+		<%= link_to 'Reset', users_path, :style => "font-size: 18px;" %>
+		<br />
+		<br />
+		<br />
+		<%= will_paginate %>
+		<ul class="image">
+			<br />
+			<hr >
+		  	<%= render @users %>  
+		 	<br />
+		</ul>
+		<%= will_paginate %>
+	<br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+	<br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+</div>

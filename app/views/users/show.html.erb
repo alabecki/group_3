@@ -87,13 +87,30 @@
 
 </div>
 <div class="friends">
-  Friends List Placeholder <br>
-  <img src="/assets/ballon.jpg"  width=50px, height=50px />
-  <img src="/assets/ballon.jpg"  width=50px, height=50px />
-  <img src="/assets/ballon.jpg"  width=50px, height=50px />
-  <img src="/assets/ballon.jpg"  width=50px, height=50px />
-  <img src="/assets/ballon.jpg"  width=50px, height=50px />
-  <img src="/assets/ballon.jpg"  width=50px, height=50px />
+  <br>
+   
+<% provide(:title, @title) %>
+<div class="row">
+  <aside class="col-md-4">
+    <section class="stats">
+      <%= render 'shared/stats' %>
+      <% if @users %>                     <%# needs to be fixed. want to use if @users.any? but get undfined method %>
+        <div class="user_avatars">
+          <% @users.each do |user| %>
+          <%= image_tag @user.avatar.url(:thumb) %>
+             <%= will_paginate %>
+            
+          <% end %>
+        </div>
+      <% end %>
+    </section>
+  </aside>
+  
+</div>
+   
+     <%= render 'follow_form' if logged_in? %>
+
+
   <img src="/assets/ballon.jpg"  width=50px, height=50px />
   <img src="/assets/ballon.jpg"  width=50px, height=50px />
 
@@ -125,9 +142,38 @@
   <img src="/assets/border.png"  width=100%, height=100px />
 
 
-  <h2> Add Comment Placeholder</h2>
-  <div class="comments">
-    <img src="/assets/logo.png"  width=200px, height=150px, margin-bottom: 100px/> </div>
+  <h2> <%=@user.username %>'s Comment Feed</h2>
+  <div class="comments"; style = "padding-left: 80px";>
+    <% if logged_in? %>
+      <div class="row">
+        <aside>
+          <section class="user_info">
+            <%= render 'shared/user_info' %>
+          </section>
+          <section class="micropost_form">
+            <%= render 'shared/micropost_form' %>
+          </section>
+        </aside>
+<%
+=begin
+%> ****Code to display the microposts feed****
+        <div class="col-md-8">
+          <h3>Micropost Feed</h3>
+          <%= render 'shared/feed' %>
+        </div>
+<%
+=end
+%>
+      </div>
+    <% end %>
+    <% if @user.microposts.any? %>
+      <h3>Comments (<%= @user.microposts.count %>)</h3>
+      <ol class="microposts">
+        <%= render @microposts %>
+      </ol>
+      <%= will_paginate @microposts %>
+    <% end %>
+  </div>
 
    </div>
    <img src="/assets/border.png"  width=100%, height=100px />

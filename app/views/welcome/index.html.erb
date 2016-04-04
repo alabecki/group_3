@@ -24,12 +24,22 @@
 }
 
 .jumbotron3{
-	background: url("http://i.imgur.com/SjZhngP.jpg");
+	background: url("http://i.imgur.com/6MzTyWl.jpg");
 	background-repeat: no-repeat;
     background-attachment: fixed;
     background-position: center;
     background-size: 100%;
     height: 880px;
+}
+
+.jumbotron4{
+	background: url("http://i.imgur.com/Q9L8sGd.jpg");
+	background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    background-size: 100%;
+	height: 1050px;
+	/*http://i.imgur.com/SjZhngP.jpg*/
 }
 
 .topjumbotron{
@@ -66,6 +76,15 @@
     opacity: 0.86;    
 }
 
+.innerjumbotron4{
+	background: #0f151a;	
+	height: 510px;
+	width: 100%;
+    margin: 0 auto;
+    text-align: center;
+}
+
+
 .floating{
 	position:relative;
 	float:left;
@@ -80,6 +99,75 @@ hr{
 h1{
   color: #41deed !important;
 }
+
+/*-----Portfolio-----*/
+.portfolio-box {
+  position: relative;
+  display: block;
+  max-width: 500px;
+  margin: 0 auto;
+}
+.portfolio-box .portfolio-box-caption {
+  color: white;
+  opacity: 0;
+  display: block;
+  /* background:  rgba(123, 38, 169, 0.6);*/
+  background:  rgba(51, 122, 183, 0.6);
+  position: absolute;
+  bottom: 0;
+  text-align: center;
+  width: 380px;
+  height: 400px;
+  -webkit-transition: all 0.35s;
+  -moz-transition: all 0.35s;
+  transition: all 0.35s;
+}
+.portfolio-box .portfolio-box-caption .portfolio-box-caption-content {
+  width: 380px;
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.portfolio-box .portfolio-box-caption .portfolio-box-caption-content .project-category,
+.portfolio-box .portfolio-box-caption .portfolio-box-caption-content .project-name {
+  font-family: 'Open Sans', 'Helvetica Neue', Arial, sans-serif;
+  padding: 0 15px;
+}
+.portfolio-box .portfolio-box-caption .portfolio-box-caption-content .project-category {
+  text-transform: uppercase;
+  font-weight: 600;
+  font-size: 25px;
+}
+.portfolio-box .portfolio-box-caption .portfolio-box-caption-content .project-name {
+  font-size: 18px;
+}
+.portfolio-box:hover .portfolio-box-caption {
+  opacity: 1;
+}
+@media (min-width: 768px) {
+  .portfolio-box .portfolio-box-caption .portfolio-box-caption-content .project-category {
+    font-size: 25px;
+  }
+  .portfolio-box .portfolio-box-caption .portfolio-box-caption-content .project-name {
+    font-size: 22px;
+  }
+}
+
+.text-faded {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.img-responsive{
+	height: 400px;
+	width: 380px;
+}
+
+.inlinedisplay{
+	display: inline-block;
+	margin: 8px;
+}
+
 </style>
 
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -151,6 +239,74 @@ h1{
 	  	</div>
 		</div>
   	</div>
+</div>
+
+<!--Three and a half jumbotron...maple-->
+<div class="jumbotron jumbotron4">
+	<br />
+	<br />
+	<br />
+	<br />
+	<br />
+	<br />
+	<br />
+	<br />
+	<br />
+	<br />
+	<br />
+	<div class="jumbotron innerjumbotron4">
+		    <section class="no-padding" id="portfolio">
+		        <div class="container-fluid">
+		            <div class="row no-gutter">
+						<div class="inlinedisplay">
+		                    <div class="portfolio-box">
+		                        <img src="http://i.imgur.com/01kFzCL.png" class="img-responsive" alt="">
+		                        <div class="portfolio-box-caption">
+		                            <div class="portfolio-box-caption-content">
+		                                <div class="project-category text-faded">
+		                                    One Thing
+		                                </div>
+		                                <div class="project-name">
+		                                    Look
+		                                </div>
+		                            </div>
+		                        </div>
+		                    </div>
+		                </div>
+		                <div class="inlinedisplay">
+		                    <div class="portfolio-box">
+		                        <img src="http://i.imgur.com/2HOZM36.jpg" class="img-responsive" alt="">
+		                        <div class="portfolio-box-caption">
+		                            <div class="portfolio-box-caption-content">
+		                                <div class="project-category text-faded">
+		                                    Two Thing
+		                                </div>
+		                                <div class="project-name">
+		                                    At
+		                                </div>
+		                            </div>
+		                        </div>
+		                    </div>
+		                </div>
+		                <div class="inlinedisplay">
+		                    <div class="portfolio-box">
+		                        <img src="http://i.imgur.com/GRVW279.jpg" class="img-responsive" alt="">
+		                        <div class="portfolio-box-caption">
+		                            <div class="portfolio-box-caption-content">
+		                                <div class="project-category text-faded">
+		                                    Three Thing
+		                                </div>
+		                                <div class="project-name">
+		                                    This
+		                                </div>
+		                            </div>
+		                        </div>
+		                    </div>
+		                </div>		               
+		            </div>
+		        </div>
+		    </section>		
+	</div>
 </div>
 
 <!--Fourth jumbotron...solid-->
