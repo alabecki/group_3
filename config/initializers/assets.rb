@@ -11,4 +11,5 @@ Rails.application.config.assets.version = '1.0'
 # Rails.application.config.assets.precompile += %w( search.js )
 Rails.application.config.assets.precompile += %w( styleprofile.css )
 
-Rails.application.config.assets.precompile += %w( logo.png )
+#Precompile default logo
+Rails.application.config.assets.precompile += %w( default.png )
