@@ -1,7 +1,8 @@
 class User<ActiveRecord::Base
 
 #PaperClip
-has_attached_file :avatar, :styles => {medium: '200x200', thumb: '100x100'},
+has_attached_file :avatar, :styles => {medium: '200x200', thumb: '100x100'}, 
+:default_url => "http://i.imgur.com/sI2eQEj.jpg",
 
 :s3_credentials => {
   :bucket =>'group3dev',
