@@ -31,7 +31,9 @@
               			<li class="dropdownvar"><%= link_to "PROFILE", current_user %></li>
 			               <li><%= link_to "SETTINGS", edit_user_path(current_user) %></li>
  			               <li class="dropdownvar"><%= link_to "SEARCH", maps_path %></li>  
- 			               <li class="dropdownvar"><%= link_to "DATA GRAPHICS", graphics_path %></li>  
+                     <% if current_user.admin? %>
+ 			                  <li class="dropdownvar"><%= link_to "DATA GRAPHICS", graphics_path %></li> 
+                     <% end %> 
 			               <li class="divider"></li>
 			               <li class = "dropdownvar"><%= link_to "LOG OUT", logout_path, method: "DELETE" %></li>
             		</ul>
@@ -61,8 +63,10 @@
   			·
   			<%= link_to 'USERS', users_path %>
   			·
-        <%= link_to 'DATA GRAPHICS', graphics_path %>
-        .
+        <% if current_user.admin? %>
+          <%= link_to 'DATA GRAPHICS', graphics_path %>
+          .
+        <% end %>
   			<%= link_to "LOG OUT", logout_path, method: "DELETE" %>
       <% else %>
         <%= link_to 'HOME', root_path %>
