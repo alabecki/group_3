@@ -1,18 +1,37 @@
+<!--Following page-->
+<style>
+.containerjumbotron{
+  width: 900px;
+    margin: 0 auto; 
+}
 
+.label_style{
+  font-size: 18px;
+  margin-right: 15px;
+}
+
+hr{
+  border-width: 3px;
+  border-color: #cbcbcb;
+  margin-right: 50px; 
+  width: 95%;
+}
+
+</style>
+<br />
 <br>
 <br>
 <br>
 <br>
 <br>
+<div class="container containerjumbotron">
 <% provide(:title, @title) %>
 <div class="row">
   <aside class="col-md-4">
     <section class="user_info">
-
-       <%= image_tag @user.avatar.url(:thumb) %>
+      <%= image_tag @user.avatar.url(:thumb) %>
       <h1><%= @user.username %></h1>
       <span><%= link_to "view my profile", @user %></span>
-
     </section>
     <section class="stats">
       <%= render 'shared/stats' %>
@@ -27,16 +46,29 @@
     </section>
   </aside>
   <div class="col-md-8">
-    <h3><%= @title %></h3>
+    <h1><%= @title %></h1>
+    <hr>
     <% if @users.any? %>
       <ul class="users follow">
-        <%= render @users %>
-        
+        <%= render @users %>       
       </ul>
       <%= will_paginate %>
+    <% else %>
+      <p>Oh no you're not following anyone or don't have any followers :(</p>
     <% end %>
+
   </div>
 </div>
-
-<br>
-<br>
+</div>
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
