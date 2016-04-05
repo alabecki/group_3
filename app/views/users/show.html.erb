@@ -116,6 +116,10 @@ h1{
 .comments{
   background-color: #404040;
 }
+
+.floating{
+position:relative;
+}
 </style>
 
 <!--~~~~~~~~~~~~~~~Body begins here~~~~~~~~~~~~~~~~~~~~~~-->
@@ -237,9 +241,8 @@ h1{
 
 </div>
 <!-- Twitter Feed -->
-<!--style="margin-left:25%;"-->
 <div class="twitterinfo">
-  <div class="floating" style="margin-right: 160px;">
+  <div class="floating">
     <div>
         <a class="twitter-timeline"
         href="https://twitter.com/" << "<%=@user.twitter_name%>"
@@ -260,10 +263,32 @@ h1{
 <br>
 
   <img src="http://i.imgur.com/zJh9zUd.png"  width=100%, height=100px />
-
+  <!--spacing-->
+  <% if @user.lol == true or @user.dota2 == true or @user.smite == true or @user.hots == true %>
+  <br />
+  <br />
+  <br />
+  <% else %>
+   <br />
+   <br />
+   <br />
+   <br />
+   <br />
+   <br />
+   <br />
+   <br />
+   <br />
+   <br />
+   <br />
+   <br /> 
+   <br />
+   <br />
+   <br /> 
+   <% end %>
 
   <h2> <%=@user.username %>'s Comment Feed</h2>
   <div class="comments"; style = "padding-left: 80px";>
+  <br />
     <% if logged_in? %>
       <div class="row">
         <aside>
@@ -290,10 +315,10 @@ h1{
       </ol>
       <%= will_paginate @microposts %>
     <% end %>
+    <br />
   </div>
 
    </div>
-   <img src="http://i.imgur.com/zJh9zUd.png"  width=100%, height=100px />
-
+   <img src="http://i.imgur.com/zJh9zUd.png"  width=100%, height=100px />  
 
 </html>
