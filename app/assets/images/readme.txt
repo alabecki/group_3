@@ -1,0 +1,1 @@
+we had to put all our images on imgur and not here cause heroku was being heroku and our giant images of sizes less than 500mb was overwhelming it.

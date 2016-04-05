@@ -2,7 +2,7 @@ require 'rails_helper'
 
 
 
-describe "index search" do
+describe "index functionality" do
     before(:each) do
         user = FactoryGirl.create(:user)
         admin = FactoryGirl.create(:admin)
@@ -12,6 +12,7 @@ describe "index search" do
         click_button "Log in"
         expect(current_url).to include "users/"
     end
+    
     
     it "search reset" do
         visit users_path
@@ -88,6 +89,6 @@ describe "index search" do
        expect(page).to have_content "Admin"
        expect(page).to_not have_content "Sorry there are no users that follow that criteria"
     end
-    
-    
+
 end
+    

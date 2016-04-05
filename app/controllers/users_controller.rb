@@ -94,6 +94,15 @@ class UsersController < ApplicationController
     redirect_to users_url
   end
   
+  def graphics
+    @users = User.all
+    @lolcount = User.count('lol', true)
+    @dotacount = User.count('dota2', true)
+    @hotscount = User.count('hots', true)
+    @smitecount = User.count('smite', true)
+    @usercount = User.count
+  end
+    
   def following
     @title = "Following"
     @user  = User.find(params[:id])
@@ -115,13 +124,14 @@ class UsersController < ApplicationController
                                    :password_confirmation, :lol, :dota2, :smite, :hots, :description, :twitter_name, :avatar, :activated)
     end
 
-def correct_user
+    def correct_user
       @user = User.find(params[:id])
       redirect_to(root_url) unless current_user?(@user)
-end
+    end
 
-def admin_user
+    def admin_user
       redirect_to(root_url) unless current_user.admin?
-end
+    end
+
 
 end

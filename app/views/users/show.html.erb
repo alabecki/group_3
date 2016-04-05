@@ -1,10 +1,130 @@
-<%= stylesheet_link_tag "styleprofile" %>
+<!--<%= stylesheet_link_tag "styleprofile" %>-->
 <!DOCTYPE html>
 <html>
+<style>
+body{
+  padding-top: 100px;
+  background-image: url("http://i.imgur.com/1zeRjY5.jpg");
+  background-size:contain;
+}
+.icon{
+
+ background-color: #b3b3b3;
+ width: 75px;
+ height: 50px;
+ position: absolute;
+ top: 160px;
+ left: 260px;
+ border: 3px solid blue;
+
+}
+
+
+.info{
+ position: relative;;
+
+  padding: 10px;
+  left: 400px;
+  text-align: left;
+  background-color: #1a1a1a;
+  width: 350px;
+
+  opacity: 0.60;
+  font-family: Arial Black;
+  color: white;
+  padding: 5px;
+  border-style: outset;
+  border-color: #110f6c;
+
+}
+
+.twitterinfo{
+  position: absolute;
+
+margin-left: 800px;
+top: 450px;
 
 
 
-  <img src="/assets/border.png"  width=100%, height=100px />
+}
+.friends{
+position: absolute;
+ top: 200px;
+ right: 200px;
+  margin-left: 600px;
+  background-color: #1a1a1a;
+  width: 350px;
+  height: 200px;
+  opacity: 0.60;
+  font-family: Arial Black;
+  color: white;
+  padding: 5px;
+  border-style: outset;
+  border-color: #110f6c;
+
+}
+h2{
+
+  font-family: Impact;
+  color: white;
+
+}
+h1{
+  position: absolute;
+  top: 420px;
+  left: 50px;
+  width: 320px;
+  height: 60px;
+  background-color: #1a1a1a;
+  opacity: 0.60;
+  font-family: Impact;
+  color: white;
+  padding: 5px;
+  border-style: outset;
+  border-color: #110f6c;
+
+}
+
+.aboutme{
+  position: absolute;
+  top: 510px;
+  left: 50px;
+  width: 320px;
+
+  background-color: #1a1a1a;
+  opacity: 0.60;
+  font-family: Arial Black;
+  color: white;
+  padding: 5px;
+  border-style: outset;
+  border-color: #110f6c;
+}
+
+
+.profile{
+  background-color:#404040;
+  position: absolute;
+  top: 200px;
+  left: 50px;
+
+  border-style: outset;
+  border-color: blue;
+  padding: 1px;
+  color: white;
+}
+
+.comments{
+  background-color: #404040;
+}
+
+.floating{
+position:relative;
+}
+</style>
+
+<!--~~~~~~~~~~~~~~~Body begins here~~~~~~~~~~~~~~~~~~~~~~-->
+<!--I had to bring the css over here cause for some reason external stylesheets aren't working...tried precompiling assets and that didn't work either :P -->
+  <img src="http://i.imgur.com/zJh9zUd.png"  width=100%, height=100px />
 <div class="picture">
 <div class="profile">
 
@@ -14,14 +134,12 @@
 <h1><%= @user.username %> </h1>
 </div>
 </div>
-
-<div class="aboutme">
-   About me....<br>
-
-<%= @user.description %><br>
-
-
-</div>
+<% if @user.description and @user.description != "" %>
+  <div class="aboutme">
+     About me<br>
+  <%= @user.description %><br>
+  </div>
+<% end %>
 
 
 <div class="info">
@@ -48,8 +166,10 @@
 </p>
 
 <p class="strong">
-  <strong> State/Province: </strong>
-  <%= @user.state %><br>
+  <% if @user.state and @user.state != "" %>
+    <strong> State/Province: </strong>
+    <%= @user.state %><br>
+  <% end %>
 </p>
 
 
@@ -59,27 +179,31 @@
 </p>
 
 <p class="postal">
-  <strong> Postal Code: </strong>
-  postal code <%= @user.postal_code %><br>
+  <% if @user.postal_code and @user.postal_code != "" %>
+    <strong> Postal Code: </strong>
+    <%= @user.postal_code %><br>
+  <% end %>
 </p>
 <br>
 <p class="game">
-  <p> Games Played:</p>
-  <% if @user.lol == true %>
-
-    <img src="/assets/logo-league.png" alt="logo" width=290px height=130px />
-  <% end %>
-
-  <% if @user.dota2 == true %>
-  <img src="/assets/logo-dota.png" alt="logo" width=290px height=170px />
-  <% end %>
-
-    <% if @user.smite == true %>
-  <img src="/assets/logo-smite.png" alt="logo" width=290px height=90px />
-  <% end %>
-
-  <% if @user.hots == true %>
-  <img src="/assets/logo-heroes.png" alt="logo" width=290px height=150px />
+  <% if @user.lol == true or @user.dota2 == true or @user.smite == true or @user.hots == true %>
+    <p> Games Played:</p>
+    <% if @user.lol == true %>
+  
+      <img src="http://i.imgur.com/1FkXKCM.png" alt="logo" width=290px height=130px />
+    <% end %>
+  
+    <% if @user.dota2 == true %>
+    <img src="http://i.imgur.com/8omtByM.png" alt="logo" width=290px height=170px />
+    <% end %>
+  
+      <% if @user.smite == true %>
+    <img src="http://i.imgur.com/xAIRHRf.png" alt="logo" width=290px height=90px />
+    <% end %>
+  
+    <% if @user.hots == true %>
+    <img src="http://i.imgur.com/HOIyxUH.png" alt="logo" width=290px height=150px />
+    <% end %>
   <% end %>
 
 
@@ -111,15 +235,14 @@
      <%= render 'follow_form' if logged_in? %>
 
 
-  <img src="/assets/ballon.jpg"  width=50px, height=50px />
-  <img src="/assets/ballon.jpg"  width=50px, height=50px />
+  <img src="http://i.imgur.com/mQcQKqS.png"  width=50px, height=50px />
+  <img src="http://i.imgur.com/mQcQKqS.png"  width=50px, height=50px />
 
 
 </div>
 <!-- Twitter Feed -->
-<!--style="margin-left:25%;"-->
 <div class="twitterinfo">
-  <div class="floating" style="margin-right: 160px;">
+  <div class="floating">
     <div>
         <a class="twitter-timeline"
         href="https://twitter.com/" << "<%=@user.twitter_name%>"
@@ -139,17 +262,36 @@
 <br>
 <br>
 
-  <img src="/assets/border.png"  width=100%, height=100px />
-
+  <img src="http://i.imgur.com/zJh9zUd.png"  width=100%, height=100px />
+  <!--spacing-->
+  <% if @user.lol == true or @user.dota2 == true or @user.smite == true or @user.hots == true %>
+  <br />
+  <br />
+  <br />
+  <% else %>
+   <br />
+   <br />
+   <br />
+   <br />
+   <br />
+   <br />
+   <br />
+   <br />
+   <br />
+   <br />
+   <br />
+   <br /> 
+   <br />
+   <br />
+   <br /> 
+   <% end %>
 
   <h2> <%=@user.username %>'s Comment Feed</h2>
   <div class="comments"; style = "padding-left: 80px";>
+  <br />
     <% if logged_in? %>
       <div class="row">
         <aside>
-          <section class="user_info">
-            <%= render 'shared/user_info' %>
-          </section>
           <section class="micropost_form">
             <%= render 'shared/micropost_form' %>
           </section>
@@ -173,10 +315,10 @@
       </ol>
       <%= will_paginate @microposts %>
     <% end %>
+    <br />
   </div>
 
    </div>
-   <img src="/assets/border.png"  width=100%, height=100px />
-
+   <img src="http://i.imgur.com/zJh9zUd.png"  width=100%, height=100px />  
 
 </html>
