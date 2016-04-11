@@ -1,25 +1,78 @@
 <%= javascript_include_tag "https://www.google.com/jsapi", "chartkick" %>
+<style>
+.jumbotron1{
+    background: url("http://i.imgur.com/M1rEuXf.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    background-size: 100%;
+    height: 730px;
+}
 
-<div style="padding-top:70px; text-align:center"><h2>Total User Count: <%= @usercount %></h2><br /></div>
-<div style="float:left; width:50%; text-align:center">
-    <h2>Highest Trafficked Cities</h2>
-    <br />
-    <%= pie_chart User.group(:city).count %>
-</div>
+.innerjumbotron1{
+    background: #0f151a;    
+    height: 380px;
+    width: 100%;
+    margin: 0 auto;
+    opacity: 0.82;
+}
 
-<div style="display:inline-block; width:50%; text-align:center">
-    <h2>Highest Trafficked Countries</h2>
+.containerjumbotron{
+    width: 800px;
+    margin: 0 auto; 
+}
+</style>
+<div class="jumbotron jumbotron1">
     <br />
-    <%= geo_chart User.group(:country).count %>
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <div class="jumbotron innerjumbotron1">
+        <div class="container containerjumbotron">
+            <hr>
+            <h2>GRAPHS, CHARTS, NUMBERS. DISCOVER THE NEW WORLD OF DATA MINING. </h2>
+            <hr>
+            <p>With the rise of Big Data in the 21st century, data mining is becoming a crucial part of society. With personal security in mind, Random Encounters provides charts and graphs with valuable data extracted from our users to depict trends and user patterns. 
+            </p>    
+        </div>
+    </div>
 </div>
+<br /> 
+<div class="container">
+    <div style="padding-top:70px; text-align:center"><h2>Total User Count: <%= @usercount %></h2><br /></div>
+    <div style="float:left; width:50%; text-align:center">
+        <h2>Highest Trafficked Cities</h2>
+        <br />
+        <%= pie_chart User.group(:city).count %>
+    </div>
 
-<div style="display:inline-block; width:50%; padding-top:70px; text-align:center">
-    <h2>Most Popular Games</h2>
-    <br />
-    <%= column_chart(
-        {"League of Legends" => @lolcount,
-        "Dota 2" => @dotacount,
-        "Heroes of the Storm" => @hotscount,
-        "Smite" => @smitecount})
-    %>
+    <div style="display:inline-block; width:50%; text-align:center">
+        <h2>Highest Trafficked Countries</h2>
+        <br />
+        <%= geo_chart User.group(:country).count %>
+    </div>
+
+    <div style="display:inline-block; width:50%; padding-top:70px; text-align:center">
+        <h2>Most Popular Games</h2>
+        <br />
+        <%= column_chart(
+            {"League of Legends" => @lolcount,
+            "Dota 2" => @dotacount,
+            "Heroes of the Storm" => @hotscount,
+            "Smite" => @smitecount})
+        %>
+    </div>
 </div>
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
