@@ -5,7 +5,7 @@ link to site: https://secure-gorge-21030.herokuapp.com/
 (remote site goes down randomly...please refer to the email I sent you)
 
 /* ************************************************************* */
-changes for "basic user model":
+- Changes for "basic user model":
   created user controller (still at default values)
   created user model found in db/migrate, which has one main file and three "add" files which add latitude, longitude, and password.
   created tests for model attributes verification in test/models/user_test.rb
